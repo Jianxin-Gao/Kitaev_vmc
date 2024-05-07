@@ -1,0 +1,178 @@
+
+=====> VARIATIONAL MONTE-CARLO PROGRAM FOR PEPS <=====
+System size (lx, ly):                   (4, 4)
+PEPS bond dimension:                    1/8
+BMPS bond dimension:                    8/16
+BMPS Truncate Scheme:                   0
+Sampling numbers:                       100
+Monte Carlo sweep repeat times:         2
+PEPS update times:                      100
+PEPS update strategy:                   2
+Conjugate gradient diagonal shift:      0.001
+=====> TECHNICAL PARAMETERS <=====
+The number of processors (including master):64
+The number of threads per processor:    1
+Proc   33 warm up completes T = 5.99636s.
+Proc   23 warm up completes T = 5.98821s.
+Proc   22 warm up completes T = 5.97331s.
+Proc   16 warm up completes T = 6.01161s.
+Proc   11 warm up completes T = 6.00004s.
+Proc   38 warm up completes T = 6.02357s.
+Proc   32 warm up completes T = 6.02995s.
+Proc   34 warm up completes T = 6.00593s.
+Proc   15 warm up completes T = 6.06415s.
+Proc   39 warm up completes T = 6.00313s.
+Proc   18 warm up completes T = 6.03127s.
+Proc   53 warm up completes T = 6.07097s.
+Proc   36 warm up completes T = 6.03086s.
+Proc   19 warm up completes T = 6.03987s.
+Proc   26 warm up completes T = 6.01467s.
+Proc   35 warm up completes T = 6.02454s.
+Proc   37 warm up completes T = 6.02354s.
+Proc   14 warm up completes T = 6.0456s.
+Proc   55 warm up completes T = 6.08082s.
+Proc   28 warm up completes T = 6.03513s.
+Proc   20 warm up completes T = 6.06843s.
+Proc   10 warm up completes T = 6.06151s.
+Proc   29 warm up completes T = 6.05035s.
+Proc   30 warm up completes T = 6.08207s.
+Proc   54 warm up completes T = 6.11461s.
+Proc   31 warm up completes T = 6.08798s.
+Proc   21 warm up completes T = 6.0814s.
+Proc   24 warm up completes T = 6.08927s.
+Proc    3 warm up completes T = 6.11933s.
+Proc   63 warm up completes T = 6.1505s.
+Proc   47 warm up completes T = 6.11261s.
+Proc   50 warm up completes T = 6.15009s.
+Proc   27 warm up completes T = 6.12158s.
+Proc   59 warm up completes T = 6.14558s.
+Proc    7 warm up completes T = 6.12605s.
+Proc   12 warm up completes T = 6.179s.
+Proc   56 warm up completes T = 6.18479s.
+Proc   58 warm up completes T = 6.14422s.
+Proc   51 warm up completes T = 6.14081s.
+Proc   13 warm up completes T = 6.14123s.
+Proc Proc   49 warm up completes T = 6.14375s.
+   5 warm up completes T = 6.13936s.
+Proc Proc   17 warm up completes T =   46 warm up completes T = 6.20264s.
+6.1372s.
+Proc   45 warm up completes T = 6.19014s.
+Proc   57 warm up completes T = 6.14545s.
+Proc    2 warm up completes T = 6.15491s.
+Proc   60 warm up completes T = 6.18721s.
+Proc    1 warm up completes T = 6.17041s.
+Proc   61 warm up completes T = 6.20435s.
+Proc   52 warm up completes T = 6.20651s.
+Proc 0    warm up completes T = 6.1759s.
+Proc    6 warm up completes T = 6.21048s.
+Proc    4 warm up completes T = 6.20542s.
+Proc   48 warm up completes T = 6.20264s.
+Proc   62 warm up completes T = 6.21869s.
+Proc   44 warm up completes T = 6.25055s.
+Proc   43 warm up completes T = 6.27031s.
+Proc   25 warm up completes T = 6.36497s.
+Proc    8 warm up completes T = 6.38019s.
+Proc    9 warm up completes T = 6.40736s.
+Proc   42 warm up completes T = 6.50638s.
+Proc   41 warm up completes T = 6.52535s.
+Proc   40 warm up completes T = 6.5486s.
+Iter 0   Alpha = 1.0e-01  E0 = -8.90613294   ± 5.84e-03  Grad norm = 6.1e-02  Accept rate = [0.08 ]SRSolver Iter = 4   NGrad norm = 4.4e-01  TPS UpdateT = 1.11  s TotT = 5.82    s
+Iter 1   Alpha = 1.0e-01  E0 = -8.93745245   ± 2.77e-03  Grad norm = 1.8e-02  Accept rate = [0.09 ]SRSolver Iter = 4   NGrad norm = 1.4e-01  TPS UpdateT = 1.39  s TotT = 5.51    s
+Iter 2   Alpha = 1.0e-01  E0 = -8.94015425   ± 1.44e-03  Grad norm = 5.2e-03  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 4.4e-02  TPS UpdateT = 1.18  s TotT = 6.07    s
+Iter 3   Alpha = 1.0e-01  E0 = -8.94309281   ± 8.14e-04  Grad norm = 1.8e-03  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.4e-02  TPS UpdateT = 1.37  s TotT = 5.80    s
+Iter 4   Alpha = 1.0e-01  E0 = -8.94412913   ± 4.92e-04  Grad norm = 5.6e-04  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 4.5e-03  TPS UpdateT = 1.16  s TotT = 4.81    s
+Iter 5   Alpha = 1.0e-01  E0 = -8.94454621   ± 2.62e-04  Grad norm = 1.7e-04  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.6e-03  TPS UpdateT = 1.33  s TotT = 4.97    s
+Iter 6   Alpha = 1.0e-01  E0 = -8.94451717   ± 1.49e-04  Grad norm = 5.4e-05  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.6e-04  TPS UpdateT = 2.26  s TotT = 6.13    s
+Iter 7   Alpha = 1.0e-01  E0 = -8.94454068   ± 9.05e-05  Grad norm = 1.7e-05  Accept rate = [0.09 ]SRSolver Iter = 9   NGrad norm = 1.2e-04  TPS UpdateT = 3.08  s TotT = 7.30    s
+Iter 8   Alpha = 1.0e-01  E0 = -8.94434210   ± 4.18e-05  Grad norm = 4.3e-06  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 3.8e-05  TPS UpdateT = 1.45  s TotT = 7.24    s
+Iter 9   Alpha = 1.0e-01  E0 = -8.94440848   ± 2.26e-05  Grad norm = 1.5e-06  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 1.2e-05  TPS UpdateT = 1.40  s TotT = 5.84    s
+Iter 10  Alpha = 1.0e-01  E0 = -8.94438223   ± 1.46e-05  Grad norm = 4.4e-07  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 3.6e-06  TPS UpdateT = 1.10  s TotT = 5.18    s
+Iter 11  Alpha = 1.0e-01  E0 = -8.94440323   ± 7.41e-06  Grad norm = 1.5e-07  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 1.1e-06  TPS UpdateT = 1.44  s TotT = 5.63    s
+Iter 12  Alpha = 1.0e-01  E0 = -8.94440020   ± 4.05e-06  Grad norm = 4.3e-08  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 3.4e-07  TPS UpdateT = 1.15  s TotT = 4.78    s
+Iter 13  Alpha = 1.0e-01  E0 = -8.94439925   ± 2.53e-06  Grad norm = 1.4e-08  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.0e-07  TPS UpdateT = 1.39  s TotT = 5.02    s
+Iter 14  Alpha = 1.0e-01  E0 = -8.94439824   ± 1.16e-06  Grad norm = 3.8e-09  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 3.2e-08  TPS UpdateT = 1.44  s TotT = 5.12    s
+Iter 15  Alpha = 1.0e-01  E0 = -8.94439914   ± 8.04e-07  Grad norm = 1.3e-09  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 9.9e-09  TPS UpdateT = 1.14  s TotT = 4.77    s
+Iter 16  Alpha = 1.0e-01  E0 = -8.94439797   ± 3.30e-07  Grad norm = 3.6e-10  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 3.1e-09  TPS UpdateT = 1.37  s TotT = 5.07    s
+Iter 17  Alpha = 1.0e-01  E0 = -8.94439816   ± 2.34e-07  Grad norm = 1.2e-10  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 9.6e-10  TPS UpdateT = 1.19  s TotT = 4.84    s
+Iter 18  Alpha = 1.0e-01  E0 = -8.94439799   ± 1.08e-07  Grad norm = 3.6e-11  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 3.0e-10  TPS UpdateT = 1.39  s TotT = 5.01    s
+Iter 19  Alpha = 1.0e-01  E0 = -8.94439798   ± 8.23e-08  Grad norm = 1.3e-11  Accept rate = [0.09 ]SRSolver Iter = 5   NGrad norm = 1.1e-10  TPS UpdateT = 1.40  s TotT = 5.07    s
+Iter 20  Alpha = 1.0e-01  E0 = -8.94439791   ± 4.51e-08  Grad norm = 4.5e-12  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 4.6e-11  TPS UpdateT = 1.18  s TotT = 4.85    s
+Iter 21  Alpha = 1.0e-01  E0 = -8.94450443   ± 1.06e-04  Grad norm = 1.1e-05  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 5.0e-04  TPS UpdateT = 1.43  s TotT = 5.14    s
+Iter 22  Alpha = 1.0e-01  E0 = -8.94439941   ± 3.36e-08  Grad norm = 2.7e-12  Accept rate = [0.09 ]SRSolver Iter = 9   NGrad norm = 9.9e-12  TPS UpdateT = 2.36  s TotT = 6.01    s
+Iter 23  Alpha = 1.0e-01  E0 = -8.94439932   ± 3.68e-08  Grad norm = 1.4e-12  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 3.4e-12  TPS UpdateT = 1.41  s TotT = 5.06    s
+Iter 24  Alpha = 1.0e-01  E0 = -8.94456924   ± 1.70e-04  Grad norm = 5.3e-05  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 6.4e-04  TPS UpdateT = 1.41  s TotT = 5.04    s
+Iter 25  Alpha = 1.0e-01  E0 = -8.94440071   ± 6.55e-08  Grad norm = 1.5e-11  Accept rate = [0.09 ]SRSolver Iter = 9   NGrad norm = 5.5e-11  TPS UpdateT = 2.31  s TotT = 5.92    s
+Iter 26  Alpha = 1.0e-01  E0 = -8.94440075   ± 4.98e-08  Grad norm = 4.5e-12  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.7e-11  TPS UpdateT = 1.39  s TotT = 5.14    s
+Iter 27  Alpha = 1.0e-01  E0 = -8.94440063   ± 4.51e-08  Grad norm = 2.0e-12  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.2e-12  TPS UpdateT = 1.43  s TotT = 5.17    s
+Iter 28  Alpha = 1.0e-01  E0 = -8.94440069   ± 4.25e-08  Grad norm = 5.8e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.8e-12  TPS UpdateT = 1.38  s TotT = 5.06    s
+Iter 29  Alpha = 1.0e-01  E0 = -8.94440065   ± 4.25e-08  Grad norm = 4.0e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.4e-12  TPS UpdateT = 1.42  s TotT = 5.09    s
+Iter 30  Alpha = 1.0e-01  E0 = -8.94450707   ± 1.06e-04  Grad norm = 1.1e-05  Accept rate = [0.10 ]SRSolver Iter = 6   NGrad norm = 4.9e-04  TPS UpdateT = 1.66  s TotT = 5.32    s
+Iter 31  Alpha = 1.0e-01  E0 = -8.94440209   ± 3.00e-08  Grad norm = 1.1e-12  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 4.7e-12  TPS UpdateT = 2.31  s TotT = 6.08    s
+Iter 32  Alpha = 1.0e-01  E0 = -8.94440205   ± 3.00e-08  Grad norm = 6.6e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 2.0e-12  TPS UpdateT = 1.20  s TotT = 4.90    s
+Iter 33  Alpha = 1.0e-01  E0 = -8.94440205   ± 3.68e-08  Grad norm = 2.7e-13  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 1.1e-12  TPS UpdateT = 1.34  s TotT = 4.92    s
+Iter 34  Alpha = 1.0e-01  E0 = -8.94440205   ± 4.25e-08  Grad norm = 1.4e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 7.0e-13  TPS UpdateT = 1.18  s TotT = 4.85    s
+Iter 35  Alpha = 1.0e-01  E0 = -8.94447263   ± 7.05e-05  Grad norm = 4.4e-06  Accept rate = [0.11 ]SRSolver Iter = 6   NGrad norm = 2.3e-04  TPS UpdateT = 1.63  s TotT = 5.29    s
+Iter 36  Alpha = 1.0e-01  E0 = -8.94440307   ± 3.97e-08  Grad norm = 1.4e-12  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 5.3e-12  TPS UpdateT = 2.33  s TotT = 6.01    s
+Iter 37  Alpha = 1.0e-01  E0 = -8.94440307   ± 3.68e-08  Grad norm = 6.9e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 2.5e-12  TPS UpdateT = 1.39  s TotT = 5.05    s
+Iter 38  Alpha = 1.0e-01  E0 = -8.94440305   ± 3.68e-08  Grad norm = 2.3e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 9.8e-13  TPS UpdateT = 1.40  s TotT = 5.11    s
+Iter 39  Alpha = 1.0e-01  E0 = -8.94440300   ± 4.98e-08  Grad norm = 2.4e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 1.0e-12  TPS UpdateT = 1.16  s TotT = 4.81    s
+Iter 40  Alpha = 1.0e-01  E0 = -8.94452613   ± 1.23e-04  Grad norm = 2.8e-05  Accept rate = [0.09 ]SRSolver Iter = 5   NGrad norm = 3.4e-04  TPS UpdateT = 1.39  s TotT = 5.05    s
+Iter 41  Alpha = 1.0e-01  E0 = -8.94440410   ± 6.72e-08  Grad norm = 8.8e-12  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 4.0e-11  TPS UpdateT = 2.36  s TotT = 6.01    s
+Iter 42  Alpha = 1.0e-01  E0 = -8.94440400   ± 4.98e-08  Grad norm = 4.4e-12  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.4e-11  TPS UpdateT = 1.38  s TotT = 5.03    s
+Iter 43  Alpha = 1.0e-01  E0 = -8.94440406   ± 2.60e-08  Grad norm = 1.7e-12  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 4.4e-12  TPS UpdateT = 1.16  s TotT = 4.80    s
+Iter 44  Alpha = 1.0e-01  E0 = -8.94440406   ± 2.60e-08  Grad norm = 1.0e-12  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 2.3e-12  TPS UpdateT = 1.14  s TotT = 4.81    s
+Iter 45  Alpha = 1.0e-01  E0 = -8.94440406   ± 3.68e-08  Grad norm = 7.1e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 1.2e-12  TPS UpdateT = 1.17  s TotT = 4.92    s
+Iter 46  Alpha = 1.0e-01  E0 = -8.94440405   ± 3.97e-08  Grad norm = 5.4e-13  Accept rate = [0.09 ]SRSolver Iter = 4   NGrad norm = 8.9e-13  TPS UpdateT = 1.19  s TotT = 4.86    s
+Iter 47  Alpha = 1.0e-01  E0 = -8.94440409   ± 3.68e-08  Grad norm = 4.2e-13  Accept rate = [0.11 ]SRSolver Iter = 4   NGrad norm = 7.4e-13  TPS UpdateT = 1.22  s TotT = 4.85    s
+Iter 48  Alpha = 1.0e-01  E0 = -8.94440404   ± 3.36e-08  Grad norm = 3.0e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 6.7e-13  TPS UpdateT = 1.16  s TotT = 4.81    s
+Iter 49  Alpha = 1.0e-01  E0 = -8.94440403   ± 3.00e-08  Grad norm = 2.9e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.9e-13  TPS UpdateT = 1.34  s TotT = 5.04    s
+Iter 50  Alpha = 1.0e-01  E0 = -8.94440408   ± 3.68e-08  Grad norm = 1.8e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.1e-13  TPS UpdateT = 1.43  s TotT = 5.06    s
+Iter 51  Alpha = 1.0e-01  E0 = -8.94440399   ± 3.36e-08  Grad norm = 1.4e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.6e-13  TPS UpdateT = 1.43  s TotT = 5.08    s
+Iter 52  Alpha = 1.0e-01  E0 = -8.94440406   ± 4.25e-08  Grad norm = 1.2e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 5.5e-13  TPS UpdateT = 1.40  s TotT = 5.09    s
+Iter 53  Alpha = 1.0e-01  E0 = -8.94440408   ± 3.97e-08  Grad norm = 9.0e-14  Accept rate = [0.09 ]SRSolver Iter = 5   NGrad norm = 6.4e-13  TPS UpdateT = 1.41  s TotT = 5.10    s
+Iter 54  Alpha = 1.0e-01  E0 = -8.94466189   ± 2.58e-04  Grad norm = 8.9e-05  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 2.0e-03  TPS UpdateT = 1.40  s TotT = 5.01    s
+Iter 55  Alpha = 1.0e-01  E0 = -8.94440574   ± 9.38e-08  Grad norm = 3.2e-11  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 1.1e-10  TPS UpdateT = 2.42  s TotT = 6.08    s
+Iter 56  Alpha = 1.0e-01  E0 = -8.94440585   ± 4.98e-08  Grad norm = 8.3e-12  Accept rate = [0.09 ]SRSolver Iter = 5   NGrad norm = 3.0e-11  TPS UpdateT = 1.43  s TotT = 5.17    s
+Iter 57  Alpha = 1.0e-01  E0 = -8.94440578   ± 4.25e-08  Grad norm = 4.0e-12  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.3e-11  TPS UpdateT = 1.42  s TotT = 5.08    s
+Iter 58  Alpha = 1.0e-01  E0 = -8.94440579   ± 4.25e-08  Grad norm = 1.7e-12  Accept rate = [0.11 ]SRSolver Iter = 4   NGrad norm = 4.4e-12  TPS UpdateT = 1.17  s TotT = 4.77    s
+Iter 59  Alpha = 1.0e-01  E0 = -8.94445374   ± 4.80e-05  Grad norm = 1.9e-06  Accept rate = [0.09 ]SRSolver Iter = 6   NGrad norm = 1.1e-04  TPS UpdateT = 1.61  s TotT = 5.40    s
+Iter 60  Alpha = 1.0e-01  E0 = -8.94446249   ± 5.60e-05  Grad norm = 2.6e-06  Accept rate = [0.11 ]SRSolver Iter = 10  NGrad norm = 1.5e-04  TPS UpdateT = 2.56  s TotT = 6.33    s
+Iter 61  Alpha = 1.0e-01  E0 = -8.94440732   ± 3.00e-08  Grad norm = 7.2e-13  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 1.2e-12  TPS UpdateT = 2.48  s TotT = 6.13    s
+Iter 62  Alpha = 1.0e-01  E0 = -8.94440732   ± 3.00e-08  Grad norm = 4.5e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 1.0e-12  TPS UpdateT = 1.17  s TotT = 4.84    s
+Iter 63  Alpha = 1.0e-01  E0 = -8.94440720   ± 4.25e-08  Grad norm = 5.4e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.4e-12  TPS UpdateT = 1.35  s TotT = 5.25    s
+Iter 64  Alpha = 1.0e-01  E0 = -8.94466456   ± 2.57e-04  Grad norm = 8.8e-05  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 2.0e-03  TPS UpdateT = 1.38  s TotT = 5.56    s
+Iter 65  Alpha = 1.0e-01  E0 = -8.94440903   ± 9.73e-08  Grad norm = 3.2e-11  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 1.6e-10  TPS UpdateT = 2.25  s TotT = 6.49    s
+Iter 66  Alpha = 1.0e-01  E0 = -8.94451110   ± 1.02e-04  Grad norm = 1.3e-05  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 3.3e-04  TPS UpdateT = 1.37  s TotT = 5.36    s
+Iter 67  Alpha = 1.0e-01  E0 = -8.94440968   ± 5.42e-08  Grad norm = 4.3e-12  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 3.4e-11  TPS UpdateT = 2.18  s TotT = 6.17    s
+Iter 68  Alpha = 1.0e-01  E0 = -8.94440970   ± 4.25e-08  Grad norm = 1.7e-12  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 1.1e-11  TPS UpdateT = 1.13  s TotT = 5.71    s
+Iter 69  Alpha = 1.0e-01  E0 = -8.94440962   ± 3.00e-08  Grad norm = 8.4e-13  Accept rate = [0.11 ]SRSolver Iter = 6   NGrad norm = 4.0e-12  TPS UpdateT = 1.74  s TotT = 5.87    s
+Iter 70  Alpha = 1.0e-01  E0 = -8.94440970   ± 3.97e-08  Grad norm = 4.0e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 1.9e-12  TPS UpdateT = 1.44  s TotT = 5.06    s
+Iter 71  Alpha = 1.0e-01  E0 = -8.94440963   ± 3.97e-08  Grad norm = 2.7e-13  Accept rate = [0.09 ]SRSolver Iter = 4   NGrad norm = 9.3e-13  TPS UpdateT = 1.19  s TotT = 4.88    s
+Iter 72  Alpha = 1.0e-01  E0 = -8.94440961   ± 3.97e-08  Grad norm = 1.8e-13  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 7.1e-13  TPS UpdateT = 1.41  s TotT = 4.99    s
+Iter 73  Alpha = 1.0e-01  E0 = -8.94440967   ± 4.25e-08  Grad norm = 1.3e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 5.7e-13  TPS UpdateT = 1.15  s TotT = 4.91    s
+Iter 74  Alpha = 1.0e-01  E0 = -8.94440971   ± 3.68e-08  Grad norm = 1.8e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 6.8e-13  TPS UpdateT = 1.20  s TotT = 4.83    s
+Iter 75  Alpha = 1.0e-01  E0 = -8.94440964   ± 4.51e-08  Grad norm = 1.3e-13  Accept rate = [0.09 ]SRSolver Iter = 5   NGrad norm = 7.0e-13  TPS UpdateT = 1.42  s TotT = 5.11    s
+Iter 76  Alpha = 1.0e-01  E0 = -8.94448315   ± 7.35e-05  Grad norm = 4.7e-06  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 2.5e-04  TPS UpdateT = 1.42  s TotT = 5.00    s
+Iter 77  Alpha = 1.0e-01  E0 = -8.94441073   ± 4.75e-08  Grad norm = 3.0e-12  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 1.1e-11  TPS UpdateT = 2.37  s TotT = 6.10    s
+Iter 78  Alpha = 1.0e-01  E0 = -8.94441069   ± 3.00e-08  Grad norm = 1.3e-12  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 3.9e-12  TPS UpdateT = 1.41  s TotT = 5.08    s
+Iter 79  Alpha = 1.0e-01  E0 = -8.94441070   ± 3.97e-08  Grad norm = 5.6e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 1.6e-12  TPS UpdateT = 1.16  s TotT = 4.98    s
+Iter 80  Alpha = 1.0e-01  E0 = -8.94441065   ± 3.97e-08  Grad norm = 3.4e-13  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 9.9e-13  TPS UpdateT = 1.39  s TotT = 5.05    s
+Iter 81  Alpha = 1.0e-01  E0 = -8.94441067   ± 3.97e-08  Grad norm = 1.7e-13  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 6.5e-13  TPS UpdateT = 1.39  s TotT = 5.04    s
+Iter 82  Alpha = 1.0e-01  E0 = -8.94441069   ± 4.51e-08  Grad norm = 9.5e-14  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.1e-13  TPS UpdateT = 1.41  s TotT = 5.08    s
+Iter 83  Alpha = 1.0e-01  E0 = -8.94445490   ± 4.42e-05  Grad norm = 1.6e-06  Accept rate = [0.09 ]SRSolver Iter = 6   NGrad norm = 9.6e-05  TPS UpdateT = 1.64  s TotT = 5.30    s
+Iter 84  Alpha = 1.0e-01  E0 = -8.94441128   ± 3.97e-08  Grad norm = 1.3e-13  Accept rate = [0.11 ]SRSolver Iter = 9   NGrad norm = 7.3e-13  TPS UpdateT = 2.32  s TotT = 6.03    s
+Iter 85  Alpha = 1.0e-01  E0 = -8.94441132   ± 4.25e-08  Grad norm = 5.5e-14  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 7.0e-13  TPS UpdateT = 1.40  s TotT = 5.10    s
+Iter 86  Alpha = 1.0e-01  E0 = -8.94441133   ± 3.00e-08  Grad norm = 4.5e-14  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 6.9e-13  TPS UpdateT = 1.39  s TotT = 5.05    s
+Iter 87  Alpha = 1.0e-01  E0 = -8.94441130   ± 3.68e-08  Grad norm = 4.6e-14  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.6e-13  TPS UpdateT = 1.44  s TotT = 5.14    s
+Iter 88  Alpha = 1.0e-01  E0 = -8.94441133   ± 4.75e-08  Grad norm = 5.3e-14  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 7.9e-13  TPS UpdateT = 1.41  s TotT = 5.13    s
+Iter 89  Alpha = 1.0e-01  E0 = -8.94441131   ± 2.60e-08  Grad norm = 5.1e-14  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 7.2e-13  TPS UpdateT = 1.43  s TotT = 5.11    s
+Iter 90  Alpha = 1.0e-01  E0 = -8.94441135   ± 3.00e-08  Grad norm = 2.0e-14  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.7e-13  TPS UpdateT = 1.37  s TotT = 5.03    s
+Iter 91  Alpha = 1.0e-01  E0 = -8.94441133   ± 3.36e-08  Grad norm = 1.9e-14  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 7.0e-13  TPS UpdateT = 1.40  s TotT = 5.06    s
+Iter 92  Alpha = 1.0e-01  E0 = -8.94441131   ± 3.68e-08  Grad norm = 1.6e-14  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 6.6e-13  TPS UpdateT = 1.44  s TotT = 5.11    s
+Iter 93  Alpha = 1.0e-01  E0 = -8.94441132   ± 3.00e-08  Grad norm = 2.5e-14  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.6e-13  TPS UpdateT = 1.39  s TotT = 5.02    s
+Iter 94  Alpha = 1.0e-01  E0 = -8.94441132   ± 4.25e-08  Grad norm = 2.7e-14  Accept rate = [0.10 ]SRSolver Iter = 5   NGrad norm = 6.7e-13  TPS UpdateT = 1.37  s TotT = 5.03    s
+Iter 95  Alpha = 1.0e-01  E0 = -8.94437136   ± 3.99e-05  Grad norm = 9.0e-07  Accept rate = [0.10 ]SRSolver Iter = 6   NGrad norm = 1.1e-04  TPS UpdateT = 1.65  s TotT = 5.26    s
+Iter 96  Alpha = 1.0e-01  E0 = -8.94441085   ± 3.97e-08  Grad norm = 7.3e-13  Accept rate = [0.10 ]SRSolver Iter = 9   NGrad norm = 2.7e-12  TPS UpdateT = 2.44  s TotT = 6.11    s
+Iter 97  Alpha = 1.0e-01  E0 = -8.94441087   ± 3.68e-08  Grad norm = 2.9e-13  Accept rate = [0.10 ]SRSolver Iter = 4   NGrad norm = 1.1e-12  TPS UpdateT = 1.21  s TotT = 4.98    s
+Iter 98  Alpha = 1.0e-01  E0 = -8.94441086   ± 4.25e-08  Grad norm = 1.3e-13  Accept rate = [0.11 ]SRSolver Iter = 5   NGrad norm = 7.4e-13  TPS UpdateT = 1.39  s TotT = 5.05    s
+Iter 99  Alpha = 1.0e-01  E0 = -8.94450048   ± 6.70e-05  Grad norm = 3.9e-06  Accept rate = [0.10 ]SRSolver Iter = 7   NGrad norm = 2.2e-04  TPS UpdateT = 1.95  s TotT = 5.57    s

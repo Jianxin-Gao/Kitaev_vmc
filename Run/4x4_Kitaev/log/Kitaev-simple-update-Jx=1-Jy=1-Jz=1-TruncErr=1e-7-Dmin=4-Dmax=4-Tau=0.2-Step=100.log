@@ -1,0 +1,110 @@
+
+=====> SIMPLE UPDATE PROGRAM FOR SquareLatticePEPS <=====
+                 System size (lx, ly) : (4, 4)
+     SquareLatticePEPS bond dimension : 4/4
+                         Trotter step : 0.2
+=====> TECHNICAL PARAMETERS <=====
+  The number of threads per processor : 2
+calculate the evolution gate taylor series order: 12
+calculate the evolution gate taylor series order: 12
+calculate the evolution gate taylor series order: 12
+step = 0	Estimated E0 =   -10.57936608 Dmin/Dmax =  1/4  SweepTime = 0.00930358
+step = 1	Estimated E0 =   -10.57937068 Dmin/Dmax =  1/4  SweepTime = 0.01196937
+step = 2	Estimated E0 =   -10.57937490 Dmin/Dmax =  1/4  SweepTime = 0.01177813
+step = 3	Estimated E0 =   -10.57937878 Dmin/Dmax =  1/4  SweepTime = 0.01175949
+step = 4	Estimated E0 =   -10.57938234 Dmin/Dmax =  1/4  SweepTime = 0.01232349
+step = 5	Estimated E0 =   -10.57938561 Dmin/Dmax =  1/4  SweepTime = 0.01122588
+step = 6	Estimated E0 =   -10.57938862 Dmin/Dmax =  1/4  SweepTime = 0.01176128
+step = 7	Estimated E0 =   -10.57939138 Dmin/Dmax =  1/4  SweepTime = 0.01131095
+step = 8	Estimated E0 =   -10.57939391 Dmin/Dmax =  1/4  SweepTime = 0.01191614
+step = 9	Estimated E0 =   -10.57939624 Dmin/Dmax =  1/4  SweepTime = 0.01127874
+step = 10	Estimated E0 =   -10.57939838 Dmin/Dmax =  1/4  SweepTime = 0.01216975
+step = 11	Estimated E0 =   -10.57940034 Dmin/Dmax =  1/4  SweepTime = 0.01160216
+step = 12	Estimated E0 =   -10.57940214 Dmin/Dmax =  1/4  SweepTime = 0.01126445
+step = 13	Estimated E0 =   -10.57940380 Dmin/Dmax =  1/4  SweepTime = 0.01067289
+step = 14	Estimated E0 =   -10.57940532 Dmin/Dmax =  1/4  SweepTime = 0.01043208
+step = 15	Estimated E0 =   -10.57940672 Dmin/Dmax =  1/4  SweepTime = 0.01145260
+step = 16	Estimated E0 =   -10.57940800 Dmin/Dmax =  1/4  SweepTime = 0.01064304
+step = 17	Estimated E0 =   -10.57940917 Dmin/Dmax =  1/4  SweepTime = 0.01037594
+step = 18	Estimated E0 =   -10.57941025 Dmin/Dmax =  1/4  SweepTime = 0.01060144
+step = 19	Estimated E0 =   -10.57941125 Dmin/Dmax =  1/4  SweepTime = 0.01082990
+step = 20	Estimated E0 =   -10.57941216 Dmin/Dmax =  1/4  SweepTime = 0.01046142
+step = 21	Estimated E0 =   -10.57941300 Dmin/Dmax =  1/4  SweepTime = 0.01111499
+step = 22	Estimated E0 =   -10.57941376 Dmin/Dmax =  1/4  SweepTime = 0.01063198
+step = 23	Estimated E0 =   -10.57941447 Dmin/Dmax =  1/4  SweepTime = 0.01051049
+step = 24	Estimated E0 =   -10.57941512 Dmin/Dmax =  1/4  SweepTime = 0.01053988
+step = 25	Estimated E0 =   -10.57941571 Dmin/Dmax =  1/4  SweepTime = 0.01082297
+step = 26	Estimated E0 =   -10.57941626 Dmin/Dmax =  1/4  SweepTime = 0.01088321
+step = 27	Estimated E0 =   -10.57941676 Dmin/Dmax =  1/4  SweepTime = 0.01325240
+step = 28	Estimated E0 =   -10.57941722 Dmin/Dmax =  1/4  SweepTime = 0.01092800
+step = 29	Estimated E0 =   -10.57941764 Dmin/Dmax =  1/4  SweepTime = 0.01061686
+step = 30	Estimated E0 =   -10.57941803 Dmin/Dmax =  1/4  SweepTime = 0.01082427
+step = 31	Estimated E0 =   -10.57941839 Dmin/Dmax =  1/4  SweepTime = 0.01069756
+step = 32	Estimated E0 =   -10.57941871 Dmin/Dmax =  1/4  SweepTime = 0.01039554
+step = 33	Estimated E0 =   -10.57941901 Dmin/Dmax =  1/4  SweepTime = 0.01139525
+step = 34	Estimated E0 =   -10.57941929 Dmin/Dmax =  1/4  SweepTime = 0.01048670
+step = 35	Estimated E0 =   -10.57941954 Dmin/Dmax =  1/4  SweepTime = 0.01036863
+step = 36	Estimated E0 =   -10.57941977 Dmin/Dmax =  1/4  SweepTime = 0.01043916
+step = 37	Estimated E0 =   -10.57941999 Dmin/Dmax =  1/4  SweepTime = 0.01162641
+step = 38	Estimated E0 =   -10.57942018 Dmin/Dmax =  1/4  SweepTime = 0.01142456
+step = 39	Estimated E0 =   -10.57942036 Dmin/Dmax =  1/4  SweepTime = 0.01279683
+step = 40	Estimated E0 =   -10.57942053 Dmin/Dmax =  1/4  SweepTime = 0.01231500
+step = 41	Estimated E0 =   -10.57942068 Dmin/Dmax =  1/4  SweepTime = 0.01145023
+step = 42	Estimated E0 =   -10.57942082 Dmin/Dmax =  1/4  SweepTime = 0.01119602
+step = 43	Estimated E0 =   -10.57942095 Dmin/Dmax =  1/4  SweepTime = 0.01166977
+step = 44	Estimated E0 =   -10.57942106 Dmin/Dmax =  1/4  SweepTime = 0.01221842
+step = 45	Estimated E0 =   -10.57942117 Dmin/Dmax =  1/4  SweepTime = 0.01142435
+step = 46	Estimated E0 =   -10.57942127 Dmin/Dmax =  1/4  SweepTime = 0.01139452
+step = 47	Estimated E0 =   -10.57942136 Dmin/Dmax =  1/4  SweepTime = 0.01124705
+step = 48	Estimated E0 =   -10.57942144 Dmin/Dmax =  1/4  SweepTime = 0.01118419
+step = 49	Estimated E0 =   -10.57942152 Dmin/Dmax =  1/4  SweepTime = 0.01172286
+step = 50	Estimated E0 =   -10.57942159 Dmin/Dmax =  1/4  SweepTime = 0.01083774
+step = 51	Estimated E0 =   -10.57942165 Dmin/Dmax =  1/4  SweepTime = 0.01072168
+step = 52	Estimated E0 =   -10.57942171 Dmin/Dmax =  1/4  SweepTime = 0.01082702
+step = 53	Estimated E0 =   -10.57942177 Dmin/Dmax =  1/4  SweepTime = 0.01119600
+step = 54	Estimated E0 =   -10.57942182 Dmin/Dmax =  1/4  SweepTime = 0.01117769
+step = 55	Estimated E0 =   -10.57942186 Dmin/Dmax =  1/4  SweepTime = 0.01178032
+step = 56	Estimated E0 =   -10.57942191 Dmin/Dmax =  1/4  SweepTime = 0.01101543
+step = 57	Estimated E0 =   -10.57942194 Dmin/Dmax =  1/4  SweepTime = 0.01083923
+step = 58	Estimated E0 =   -10.57942198 Dmin/Dmax =  1/4  SweepTime = 0.01101691
+step = 59	Estimated E0 =   -10.57942201 Dmin/Dmax =  1/4  SweepTime = 0.01155509
+step = 60	Estimated E0 =   -10.57942204 Dmin/Dmax =  1/4  SweepTime = 0.01137497
+step = 61	Estimated E0 =   -10.57942207 Dmin/Dmax =  1/4  SweepTime = 0.01249657
+step = 62	Estimated E0 =   -10.57942209 Dmin/Dmax =  1/4  SweepTime = 0.01157504
+step = 63	Estimated E0 =   -10.57942212 Dmin/Dmax =  1/4  SweepTime = 0.01143563
+step = 64	Estimated E0 =   -10.57942214 Dmin/Dmax =  1/4  SweepTime = 0.01170999
+step = 65	Estimated E0 =   -10.57942216 Dmin/Dmax =  1/4  SweepTime = 0.01136669
+step = 66	Estimated E0 =   -10.57942218 Dmin/Dmax =  1/4  SweepTime = 0.01214699
+step = 67	Estimated E0 =   -10.57942219 Dmin/Dmax =  1/4  SweepTime = 0.01136341
+step = 68	Estimated E0 =   -10.57942221 Dmin/Dmax =  1/4  SweepTime = 0.01132508
+step = 69	Estimated E0 =   -10.57942222 Dmin/Dmax =  1/4  SweepTime = 0.01159079
+step = 70	Estimated E0 =   -10.57942223 Dmin/Dmax =  1/4  SweepTime = 0.01130487
+step = 71	Estimated E0 =   -10.57942225 Dmin/Dmax =  1/4  SweepTime = 0.01124175
+step = 72	Estimated E0 =   -10.57942226 Dmin/Dmax =  1/4  SweepTime = 0.01155477
+step = 73	Estimated E0 =   -10.57942227 Dmin/Dmax =  1/4  SweepTime = 0.01079800
+step = 74	Estimated E0 =   -10.57942227 Dmin/Dmax =  1/4  SweepTime = 0.01097652
+step = 75	Estimated E0 =   -10.57942228 Dmin/Dmax =  1/4  SweepTime = 0.01149612
+step = 76	Estimated E0 =   -10.57942229 Dmin/Dmax =  1/4  SweepTime = 0.01139840
+step = 77	Estimated E0 =   -10.57942230 Dmin/Dmax =  1/4  SweepTime = 0.01205067
+step = 78	Estimated E0 =   -10.57942230 Dmin/Dmax =  1/4  SweepTime = 0.01140886
+step = 79	Estimated E0 =   -10.57942231 Dmin/Dmax =  1/4  SweepTime = 0.01154502
+step = 80	Estimated E0 =   -10.57942232 Dmin/Dmax =  1/4  SweepTime = 0.01135310
+step = 81	Estimated E0 =   -10.57942232 Dmin/Dmax =  1/4  SweepTime = 0.01129509
+step = 82	Estimated E0 =   -10.57942232 Dmin/Dmax =  1/4  SweepTime = 0.01151703
+step = 83	Estimated E0 =   -10.57942233 Dmin/Dmax =  1/4  SweepTime = 0.01228418
+step = 84	Estimated E0 =   -10.57942233 Dmin/Dmax =  1/4  SweepTime = 0.01197274
+step = 85	Estimated E0 =   -10.57942234 Dmin/Dmax =  1/4  SweepTime = 0.01143321
+step = 86	Estimated E0 =   -10.57942234 Dmin/Dmax =  1/4  SweepTime = 0.01121185
+step = 87	Estimated E0 =   -10.57942234 Dmin/Dmax =  1/4  SweepTime = 0.01168510
+step = 88	Estimated E0 =   -10.57942234 Dmin/Dmax =  1/4  SweepTime = 0.01235997
+step = 89	Estimated E0 =   -10.57942235 Dmin/Dmax =  1/4  SweepTime = 0.01167409
+step = 90	Estimated E0 =   -10.57942235 Dmin/Dmax =  1/4  SweepTime = 0.01152499
+step = 91	Estimated E0 =   -10.57942235 Dmin/Dmax =  1/4  SweepTime = 0.01119614
+step = 92	Estimated E0 =   -10.57942235 Dmin/Dmax =  1/4  SweepTime = 0.01179550
+step = 93	Estimated E0 =   -10.57942236 Dmin/Dmax =  1/4  SweepTime = 0.01069017
+step = 94	Estimated E0 =   -10.57942236 Dmin/Dmax =  1/4  SweepTime = 0.01293236
+step = 95	Estimated E0 =   -10.57942236 Dmin/Dmax =  1/4  SweepTime = 0.01065974
+step = 96	Estimated E0 =   -10.57942236 Dmin/Dmax =  1/4  SweepTime = 0.01055238
+step = 97	Estimated E0 =   -10.57942236 Dmin/Dmax =  1/4  SweepTime = 0.01050817
+step = 98	Estimated E0 =   -10.57942236 Dmin/Dmax =  1/4  SweepTime = 0.01046887
+step = 99	Estimated E0 =   -10.57942236 Dmin/Dmax =  1/4  SweepTime = 0.01124413

@@ -1,0 +1,28 @@
+{
+  "CaseParams": {
+    "Ly": 4,
+    "Lx": 4,
+    "J2": 0,
+    "Jx": 1,
+    "Jy": 1,
+    "Jz": 0.01,
+    "Dbmps_min": 8,
+    "Dbmps_max": 16,
+    "TruncErr": 1e-8,
+    "MC_samples": 100,
+    "WarmUp": 300,
+    "MCLocalUpdateSweepsBetweenSample": 2,
+    "CGMaxIter": 100,
+    "CGTol": 1e-5,
+    "CGResidueRestart": 20,
+    "CGDiagShift": 0.001,
+    "ReplicaTest": true,
+    "RemoveCorner": true,
+    "MPSCompressScheme": 0,
+    "StepLengthFirst": 0.1,
+    "StepLengthDecrease": 0,
+    "UpdateNum": 100,
+    "UpdateScheme": 2,
+    "ThreadNum": 1
+  }
+}

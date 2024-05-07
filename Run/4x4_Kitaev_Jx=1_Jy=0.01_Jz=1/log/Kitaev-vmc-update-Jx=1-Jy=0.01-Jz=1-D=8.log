@@ -1,0 +1,233 @@
+
+=====> VARIATIONAL MONTE-CARLO PROGRAM FOR PEPS <=====
+System size (lx, ly):                   (4, 4)
+PEPS bond dimension:                    1/8
+BMPS bond dimension:                    8/16
+BMPS Truncate Scheme:                   0
+Sampling numbers:                       100
+Monte Carlo sweep repeat times:         2
+PEPS update times:                      100
+PEPS update strategy:                   2
+Conjugate gradient diagonal shift:      0.001
+=====> TECHNICAL PARAMETERS <=====
+The number of processors (including master):64
+The number of threads per processor:    1
+Proc   12 warm up completes T = 6.10791s.
+Proc   20 warm up completes T = 6.14543s.
+Proc   15 warm up completes T = 6.13068s.
+Proc   14 warm up completes T = 6.11494s.
+Proc   22 warm up completes T = 6.155s.
+Proc   36 warm up completes T = 6.1451s.
+Proc   13 warm up completes T = 6.15908s.
+Proc   17 warm up completes T = 6.17164s.
+Proc   16 warm up completes T = 6.17174s.
+Proc   21 warm up completes T = 6.17647s.
+Proc   58 warm up completes T = 6.18725s.
+Proc   19 warm up completes T = 6.20095s.
+Proc   33 warm up completes T = 6.19064s.
+Proc   18 warm up completes T = 6.17365s.
+Proc   57 warm up completes T = 6.1997s.
+Proc   37 warm up completes T = 6.18173s.
+Proc   28 warm up completes T = 6.18871s.
+Proc    2 warm up completes T = 6.20037s.
+Proc   39 warm up completes T = 6.23558s.
+Proc   51 warm up completes T = 6.23728s.
+Proc   47 warm up completes T = 6.26151s.
+Proc   35 warm up completes T = 6.19599s.
+Proc   32 warm up completes T = 6.21886s.
+Proc   41 warm up completes T = 6.25902s.
+Proc    1 warm up completes T = 6.22485s.
+Proc   30 warm up completes T = 6.21783s.
+Proc   27 warm up completes T = 6.21805s.
+Proc Proc   49 warm up completes T = 6.22285s.
+0    warm up completes T = 6.21196s.Proc   56 warm up completes T = 6.26606s.
+
+Proc   10 warm up completes T = 6.27818s.
+Proc   61 warm up completes T = 6.2267s.
+Proc   54 warm up completes T = 6.23446s.
+Proc   29 warm up completes T = 6.26493s.
+Proc    7 warm up completes T = 6.23459s.
+Proc    4 warm up completes T = 6.24689s.
+Proc   31 warm up completes T = 6.2774s.
+Proc   55 warm up completes T = 6.23678s.
+Proc   45 warm up completes T = Proc    6 warm up completes T = 6.28671s.
+6.27359s.
+Proc   53 warm up completes T = 6.24524s.
+Proc    9 warm up completes T = 6.2476s.
+Proc    3 warm up completes T = 6.2555s.
+Proc   23 warm up completes T = 6.2677s.
+Proc   50 warm up completes T = 6.26428s.
+Proc   42 warm up completes T = 6.26486s.
+Proc   52 warm up completes T = 6.26887s.
+Proc   34 warm up completes T = 6.2728s.
+Proc   62 warm up completes T = 6.29882s.
+Proc   46 warm up completes T = 6.2885s.
+Proc    8 warm up completes T = 6.29296s.
+Proc   26 warm up completes T = 6.32712s.
+Proc   38 warm up completes T = 6.29909s.
+Proc   44 warm up completes T = 6.30091s.
+Proc   60 warm up completes T = 6.33186s.
+Proc   25 warm up completes T = 6.31019s.
+Proc   40 warm up completes T = 6.33348s.
+Proc   59 warm up completes T = 6.34358s.
+Proc   43 warm up completes T = 6.33933s.
+Proc   63 warm up completes T = 6.34273s.
+Proc   48 warm up completes T = 6.38519s.
+Proc   11 warm up completes T = 6.38294s.
+Proc    5 warm up completes T = 6.43743s.
+Proc   24 warm up completes T = 6.52681s.
+Iter 0   Alpha = 1.0e-01  E0 = -8.12207336   ± 4.61e-03  Grad norm = 1.6e+14  Accept rate = [0.07 ]SRSolver Iter = 45  NGrad norm = 2.2e-14  TPS UpdateT = 13.99 s TotT = 18.64   s
+Iter 1   Alpha = 1.0e-01  E0 = -8.13334596   ± 5.91e-03  Grad norm = 2.1e+14  Accept rate = [0.07 ]SRSolver Iter = 46  NGrad norm = 1.7e-14  TPS UpdateT = 13.19 s TotT = 17.65   s
+Iter 2   Alpha = 1.0e-01  E0 = -8.14370120   ± 4.31e-03  Grad norm = 6.7e+13  Accept rate = [0.06 ]SRSolver Iter = 47  NGrad norm = 1.0e-14  TPS UpdateT = 12.17 s TotT = 17.17   s
+Iter 3   Alpha = 1.0e-01  E0 = -8.14672490   ± 4.49e-03  Grad norm = 5.0e+13  Accept rate = [0.06 ]SRSolver Iter = 51  NGrad norm = 1.1e-14  TPS UpdateT = 13.02 s TotT = 16.74   s
+Iter 4   Alpha = 1.0e-01  E0 = -8.14118212   ± 4.20e-03  Grad norm = 1.2e+14  Accept rate = [0.06 ]SRSolver Iter = 53  NGrad norm = 6.9e-15  TPS UpdateT = 13.51 s TotT = 17.26   s
+Iter 5   Alpha = 1.0e-01  E0 = -8.13205095   ± 5.72e-03  Grad norm = 1.6e+14  Accept rate = [0.07 ]SRSolver Iter = 63  NGrad norm = 6.8e-15  TPS UpdateT = 16.21 s TotT = 19.93   s
+Iter 6   Alpha = 1.0e-01  E0 = -8.10642724   ± 1.03e-02  Grad norm = 4.9e+14  Accept rate = [0.07 ]SRSolver Iter = 42  NGrad norm = 5.1e-15  TPS UpdateT = 11.10 s TotT = 14.80   s
+Iter 7   Alpha = 1.0e-01  E0 = -8.14104176   ± 6.73e-03  Grad norm = 1.1e+14  Accept rate = [0.06 ]SRSolver Iter = 66  NGrad norm = 1.2e-14  TPS UpdateT = 16.96 s TotT = 20.72   s
+Iter 8   Alpha = 1.0e-01  E0 = -8.12111918   ± 6.95e-03  Grad norm = 3.4e+14  Accept rate = [0.06 ]SRSolver Iter = 62  NGrad norm = 1.6e-14  TPS UpdateT = 16.17 s TotT = 19.92   s
+Iter 9   Alpha = 1.0e-01  E0 = -8.12841042   ± 6.79e-03  Grad norm = 8.9e+14  Accept rate = [0.07 ]SRSolver Iter = 46  NGrad norm = 1.5e-14  TPS UpdateT = 12.25 s TotT = 16.14   s
+Iter 10  Alpha = 1.0e-01  E0 = -8.14179134   ± 4.61e-03  Grad norm = 2.7e+15  Accept rate = [0.06 ]SRSolver Iter = 32  NGrad norm = 1.4e-14  TPS UpdateT = 8.25  s TotT = 11.99   s
+Iter 11  Alpha = 1.0e-01  E0 = -8.13531268   ± 5.67e-03  Grad norm = 1.0e+14  Accept rate = [0.07 ]SRSolver Iter = 81  NGrad norm = 2.4e-14  TPS UpdateT = 20.70 s TotT = 24.38   s
+Iter 12  Alpha = 1.0e-01  E0 = -8.13467806   ± 5.86e-03  Grad norm = 1.1e+14  Accept rate = [0.07 ]SRSolver Iter = 96  NGrad norm = 6.5e-14  TPS UpdateT = 24.49 s TotT = 28.25   s
+Iter 13  Alpha = 1.0e-01  E0 = -8.09059338   ± 1.77e-02  Grad norm = 2.0e+15  Accept rate = [0.06 ]SRSolver Iter = 44  NGrad norm = 5.2e-14  TPS UpdateT = 11.40 s TotT = 15.08   s
+Iter 14  Alpha = 1.0e-01  E0 = -8.07869399   ± 1.49e-02  Grad norm = 5.2e+14  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 6.2e-14  TPS UpdateT = 25.69 s TotT = 29.42   s
+Iter 15  Alpha = 1.0e-01  E0 = -8.10984055   ± 9.89e-03  Grad norm = 8.5e+14  Accept rate = [0.06 ]SRSolver Iter = 62  NGrad norm = 6.6e-14  TPS UpdateT = 15.95 s TotT = 19.62   s
+Iter 16  Alpha = 1.0e-01  E0 = -8.12230820   ± 6.45e-03  Grad norm = 4.1e+14  Accept rate = [0.07 ]SRSolver Iter = 50  NGrad norm = 6.3e-14  TPS UpdateT = 12.27 s TotT = 16.01   s
+Iter 17  Alpha = 1.0e-01  E0 = -8.12144859   ± 5.92e-03  Grad norm = 3.3e+14  Accept rate = [0.06 ]SRSolver Iter = 80  NGrad norm = 6.2e-14  TPS UpdateT = 19.88 s TotT = 24.30   s
+Iter 18  Alpha = 1.0e-01  E0 = -8.11768821   ± 6.81e-03  Grad norm = 1.7e+14  Accept rate = [0.06 ]SRSolver Iter = 94  NGrad norm = 6.5e-14  TPS UpdateT = 23.91 s TotT = 27.68   s
+Iter 19  Alpha = 1.0e-01  E0 = -8.11739359   ± 8.35e-03  Grad norm = 2.2e+14  Accept rate = [0.05 ]SRSolver Iter = 72  NGrad norm = 7.8e-14  TPS UpdateT = 18.67 s TotT = 22.34   s
+Iter 20  Alpha = 1.0e-01  E0 = -8.13073243   ± 5.89e-03  Grad norm = 1.1e+14  Accept rate = [0.06 ]SRSolver Iter = 61  NGrad norm = 7.6e-14  TPS UpdateT = 15.90 s TotT = 19.67   s
+Iter 21  Alpha = 1.0e-01  E0 = -8.12390007   ± 5.89e-03  Grad norm = 2.1e+14  Accept rate = [0.06 ]SRSolver Iter = 74  NGrad norm = 7.4e-14  TPS UpdateT = 18.95 s TotT = 22.85   s
+Iter 22  Alpha = 1.0e-01  E0 = -8.07681480   ± 1.57e-02  Grad norm = 2.7e+15  Accept rate = [0.06 ]SRSolver Iter = 62  NGrad norm = 5.7e-14  TPS UpdateT = 16.05 s TotT = 19.80   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.34e+10
+Iter 23  Alpha = 1.0e-01  E0 = -8.10671974   ± 8.75e-03  Grad norm = 1.3e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 9.1e-14  TPS UpdateT = 26.04 s TotT = 29.74   s
+Iter 24  Alpha = 1.0e-01  E0 = -8.10644866   ± 9.81e-03  Grad norm = 4.5e+14  Accept rate = [0.06 ]SRSolver Iter = 92  NGrad norm = 9.4e-14  TPS UpdateT = 23.54 s TotT = 27.21   s
+Iter 25  Alpha = 1.0e-01  E0 = -8.11618238   ± 7.16e-03  Grad norm = 2.4e+14  Accept rate = [0.06 ]SRSolver Iter = 76  NGrad norm = 8.2e-14  TPS UpdateT = 19.52 s TotT = 23.20   s
+Iter 26  Alpha = 1.0e-01  E0 = -8.11714405   ± 7.54e-03  Grad norm = 2.2e+14  Accept rate = [0.06 ]SRSolver Iter = 97  NGrad norm = 9.2e-14  TPS UpdateT = 24.81 s TotT = 28.72   s
+Iter 27  Alpha = 1.0e-01  E0 = -8.12130618   ± 7.57e-03  Grad norm = 2.0e+14  Accept rate = [0.06 ]SRSolver Iter = 95  NGrad norm = 8.8e-14  TPS UpdateT = 24.36 s TotT = 28.09   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 4.30e+10
+Iter 28  Alpha = 1.0e-01  E0 = -8.13284652   ± 6.56e-03  Grad norm = 6.9e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 1.1e-13  TPS UpdateT = 25.33 s TotT = 29.06   s
+Iter 29  Alpha = 1.0e-01  E0 = -8.12481145   ± 6.85e-03  Grad norm = 2.6e+14  Accept rate = [0.06 ]SRSolver Iter = 66  NGrad norm = 1.1e-13  TPS UpdateT = 16.41 s TotT = 20.86   s
+Iter 30  Alpha = 1.0e-01  E0 = -8.09614424   ± 1.19e-02  Grad norm = 3.0e+14  Accept rate = [0.06 ]SRSolver Iter = 87  NGrad norm = 1.1e-13  TPS UpdateT = 22.23 s TotT = 26.69   s
+Iter 31  Alpha = 1.0e-01  E0 = -8.02607582   ± 1.99e-02  Grad norm = 5.1e+15  Accept rate = [0.08 ]SRSolver Iter = 50  NGrad norm = 1.1e-13  TPS UpdateT = 13.02 s TotT = 16.74   s
+Iter 32  Alpha = 1.0e-01  E0 = -8.06880971   ± 1.31e-02  Grad norm = 5.9e+14  Accept rate = [0.05 ]SRSolver Iter = 70  NGrad norm = 1.5e-13  TPS UpdateT = 18.14 s TotT = 21.82   s
+Iter 33  Alpha = 1.0e-01  E0 = -8.07834599   ± 1.10e-02  Grad norm = 6.9e+14  Accept rate = [0.06 ]SRSolver Iter = 85  NGrad norm = 1.2e-13  TPS UpdateT = 21.96 s TotT = 25.64   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 2.67e+10
+Iter 34  Alpha = 1.0e-01  E0 = -8.09768408   ± 1.05e-02  Grad norm = 5.0e+14  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 1.9e-13  TPS UpdateT = 25.66 s TotT = 29.24   s
+Iter 35  Alpha = 1.0e-01  E0 = -8.11084911   ± 6.94e-03  Grad norm = 2.6e+14  Accept rate = [0.06 ]SRSolver Iter = 66  NGrad norm = 1.9e-13  TPS UpdateT = 16.90 s TotT = 20.63   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 2.86e+11
+Iter 36  Alpha = 1.0e-01  E0 = -8.09531962   ± 1.12e-02  Grad norm = 3.6e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.2e-13  TPS UpdateT = 25.54 s TotT = 29.32   s
+Iter 37  Alpha = 1.0e-01  E0 = -8.06778431   ± 1.47e-02  Grad norm = 9.3e+14  Accept rate = [0.06 ]SRSolver Iter = 84  NGrad norm = 2.5e-13  TPS UpdateT = 21.66 s TotT = 25.42   s
+Iter 38  Alpha = 1.0e-01  E0 = -8.07976382   ± 1.27e-02  Grad norm = 5.0e+14  Accept rate = [0.06 ]SRSolver Iter = 81  NGrad norm = 2.2e-13  TPS UpdateT = 21.13 s TotT = 24.77   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 2.28e+10
+Iter 39  Alpha = 1.0e-01  E0 = -8.09883474   ± 9.74e-03  Grad norm = 3.5e+14  Accept rate = [0.05 ]SRSolver Iter = 100 NGrad norm = 2.5e-13  TPS UpdateT = 26.33 s TotT = 30.14   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.76e+10
+Iter 40  Alpha = 1.0e-01  E0 = -8.10993250   ± 7.31e-03  Grad norm = 2.4e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.2e-13  TPS UpdateT = 25.57 s TotT = 29.30   s
+Iter 41  Alpha = 1.0e-01  E0 = -8.08496613   ± 1.19e-02  Grad norm = 2.5e+14  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 2.1e-13  TPS UpdateT = 25.04 s TotT = 29.83   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.68e+12
+Iter 42  Alpha = 1.0e-01  E0 = -8.07870476   ± 1.08e-02  Grad norm = 2.4e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.8e-13  TPS UpdateT = 25.88 s TotT = 29.67   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 6.68e+09
+Iter 43  Alpha = 1.0e-01  E0 = -8.08221872   ± 1.15e-02  Grad norm = 1.7e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.7e-13  TPS UpdateT = 26.25 s TotT = 29.99   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 8.83e+10
+Iter 44  Alpha = 1.0e-01  E0 = -8.11267533   ± 7.98e-03  Grad norm = 8.6e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.2e-13  TPS UpdateT = 26.01 s TotT = 29.75   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.14e+11
+Iter 45  Alpha = 1.0e-01  E0 = -8.13086027   ± 6.01e-03  Grad norm = 1.5e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.2e-13  TPS UpdateT = 25.56 s TotT = 29.26   s
+Iter 46  Alpha = 1.0e-01  E0 = -8.13574268   ± 6.54e-03  Grad norm = 8.4e+13  Accept rate = [0.07 ]SRSolver Iter = 96  NGrad norm = 2.4e-13  TPS UpdateT = 24.42 s TotT = 28.13   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.47e+10
+Iter 47  Alpha = 1.0e-01  E0 = -8.11193560   ± 7.97e-03  Grad norm = 6.3e+13  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 3.2e-13  TPS UpdateT = 25.77 s TotT = 29.49   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 5.66e+10
+Iter 48  Alpha = 1.0e-01  E0 = -8.10873652   ± 8.51e-03  Grad norm = 1.2e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 3.1e-13  TPS UpdateT = 25.70 s TotT = 29.42   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 9.37e+09
+Iter 49  Alpha = 1.0e-01  E0 = -8.11571569   ± 8.72e-03  Grad norm = 1.4e+14  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 3.1e-13  TPS UpdateT = 25.82 s TotT = 29.59   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 2.73e+11
+Iter 50  Alpha = 1.0e-01  E0 = -8.11272511   ± 6.19e-03  Grad norm = 1.1e+14  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 3.0e-13  TPS UpdateT = 25.57 s TotT = 29.28   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.04e+10
+Iter 51  Alpha = 1.0e-01  E0 = -8.11001566   ± 8.81e-03  Grad norm = 1.9e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 3.2e-13  TPS UpdateT = 24.62 s TotT = 29.01   s
+Iter 52  Alpha = 1.0e-01  E0 = -8.12595264   ± 6.80e-03  Grad norm = 1.5e+14  Accept rate = [0.06 ]SRSolver Iter = 79  NGrad norm = 2.8e-13  TPS UpdateT = 19.97 s TotT = 23.66   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.29e+11
+Iter 53  Alpha = 1.0e-01  E0 = -8.09167605   ± 1.01e-02  Grad norm = 1.5e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.7e-13  TPS UpdateT = 26.01 s TotT = 29.66   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.41e+10
+Iter 54  Alpha = 1.0e-01  E0 = -8.10953598   ± 8.85e-03  Grad norm = 2.2e+14  Accept rate = [0.05 ]SRSolver Iter = 100 NGrad norm = 3.0e-13  TPS UpdateT = 26.10 s TotT = 29.84   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.27e+10
+Iter 55  Alpha = 1.0e-01  E0 = -8.12772379   ± 6.46e-03  Grad norm = 5.2e+13  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 2.7e-13  TPS UpdateT = 25.90 s TotT = 29.71   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.02e+10
+Iter 56  Alpha = 1.0e-01  E0 = -8.11877127   ± 8.63e-03  Grad norm = 1.9e+14  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 2.5e-13  TPS UpdateT = 25.84 s TotT = 29.87   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.48e+10
+Iter 57  Alpha = 1.0e-01  E0 = -8.11367787   ± 6.34e-03  Grad norm = 1.9e+14  Accept rate = [0.05 ]SRSolver Iter = 100 NGrad norm = 2.3e-13  TPS UpdateT = 25.74 s TotT = 29.45   s
+Iter 58  Alpha = 1.0e-01  E0 = -8.12908423   ± 7.73e-03  Grad norm = 3.4e+15  Accept rate = [0.06 ]SRSolver Iter = 49  NGrad norm = 2.2e-13  TPS UpdateT = 12.69 s TotT = 16.60   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.11e+12
+Iter 59  Alpha = 1.0e-01  E0 = -8.12309024   ± 6.11e-03  Grad norm = 1.4e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.5e-13  TPS UpdateT = 25.66 s TotT = 29.63   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 7.11e+10
+Iter 60  Alpha = 1.0e-01  E0 = -8.09932851   ± 8.52e-03  Grad norm = 2.2e+14  Accept rate = [0.08 ]SRSolver Iter = 100 NGrad norm = 2.5e-13  TPS UpdateT = 25.83 s TotT = 29.56   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.03e+11
+Iter 61  Alpha = 1.0e-01  E0 = -8.09364700   ± 1.06e-02  Grad norm = 2.1e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.9e-13  TPS UpdateT = 24.97 s TotT = 28.72   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.96e+10
+Iter 62  Alpha = 1.0e-01  E0 = -8.11119153   ± 5.98e-03  Grad norm = 8.5e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 2.8e-13  TPS UpdateT = 25.53 s TotT = 29.81   s
+Iter 63  Alpha = 1.0e-01  E0 = -7.94799674   ± 4.07e-02  Grad norm = 6.9e+14  Accept rate = [0.06 ]SRSolver Iter = 88  NGrad norm = 3.8e-13  TPS UpdateT = 22.57 s TotT = 26.30   s
+Iter 64  Alpha = 1.0e-01  E0 = -8.09042048   ± 1.25e-02  Grad norm = 2.7e+14  Accept rate = [0.07 ]SRSolver Iter = 80  NGrad norm = 3.3e-13  TPS UpdateT = 20.31 s TotT = 24.02   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 2.81e+11
+Iter 65  Alpha = 1.0e-01  E0 = -8.13000228   ± 7.75e-03  Grad norm = 1.0e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 3.5e-13  TPS UpdateT = 25.83 s TotT = 29.50   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 4.64e+10
+Iter 66  Alpha = 1.0e-01  E0 = -8.10671250   ± 1.13e-02  Grad norm = 1.5e+14  Accept rate = [0.05 ]SRSolver Iter = 100 NGrad norm = 4.5e-13  TPS UpdateT = 26.12 s TotT = 30.09   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 2.46e+09
+Iter 67  Alpha = 1.0e-01  E0 = -8.12332379   ± 5.91e-03  Grad norm = 7.0e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 3.8e-13  TPS UpdateT = 25.78 s TotT = 29.52   s
+Iter 68  Alpha = 1.0e-01  E0 = -8.06783322   ± 1.17e-02  Grad norm = 9.5e+14  Accept rate = [0.06 ]SRSolver Iter = 76  NGrad norm = 3.8e-13  TPS UpdateT = 19.58 s TotT = 23.33   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 4.63e+10
+Iter 69  Alpha = 1.0e-01  E0 = -8.08762909   ± 9.43e-03  Grad norm = 4.6e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 4.0e-13  TPS UpdateT = 26.11 s TotT = 29.89   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 6.65e+09
+Iter 70  Alpha = 1.0e-01  E0 = -8.10638889   ± 7.93e-03  Grad norm = 3.4e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 4.1e-13  TPS UpdateT = 25.43 s TotT = 29.15   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 8.14e+10
+Iter 71  Alpha = 1.0e-01  E0 = -8.09258945   ± 1.02e-02  Grad norm = 1.4e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 5.7e-13  TPS UpdateT = 25.93 s TotT = 29.66   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.94e+11
+Iter 72  Alpha = 1.0e-01  E0 = -8.11607549   ± 6.41e-03  Grad norm = 7.6e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 5.8e-13  TPS UpdateT = 24.96 s TotT = 28.81   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 4.46e+10
+Iter 73  Alpha = 1.0e-01  E0 = -8.11629392   ± 8.38e-03  Grad norm = 1.2e+14  Accept rate = [0.05 ]SRSolver Iter = 100 NGrad norm = 5.8e-13  TPS UpdateT = 26.06 s TotT = 30.56   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.69e+09
+Iter 74  Alpha = 1.0e-01  E0 = -8.08318368   ± 1.01e-02  Grad norm = 1.3e+14  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 5.8e-13  TPS UpdateT = 26.57 s TotT = 30.26   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.32e+10
+Iter 75  Alpha = 1.0e-01  E0 = -8.06145909   ± 1.59e-02  Grad norm = 1.4e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 1.0e-12  TPS UpdateT = 25.82 s TotT = 29.53   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 9.93e+09
+Iter 76  Alpha = 1.0e-01  E0 = -8.12615368   ± 7.15e-03  Grad norm = 4.9e+13  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 1.1e-12  TPS UpdateT = 26.17 s TotT = 29.83   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.79e+10
+Iter 77  Alpha = 1.0e-01  E0 = -8.13688331   ± 5.37e-03  Grad norm = 2.2e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 9.0e-13  TPS UpdateT = 25.73 s TotT = 29.47   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.32e+09
+Iter 78  Alpha = 1.0e-01  E0 = -8.11113035   ± 6.93e-03  Grad norm = 6.1e+13  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 8.3e-13  TPS UpdateT = 25.91 s TotT = 29.62   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 8.08e+10
+Iter 79  Alpha = 1.0e-01  E0 = -8.09386299   ± 9.27e-03  Grad norm = 8.9e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 9.2e-13  TPS UpdateT = 26.08 s TotT = 29.77   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 2.42e+10
+Iter 80  Alpha = 1.0e-01  E0 = -8.12049754   ± 5.96e-03  Grad norm = 4.4e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 9.1e-13  TPS UpdateT = 25.95 s TotT = 29.69   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 4.40e+10
+Iter 81  Alpha = 1.0e-01  E0 = -8.11408151   ± 8.95e-03  Grad norm = 5.7e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 6.8e-13  TPS UpdateT = 25.90 s TotT = 29.61   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 4.41e+11
+Iter 82  Alpha = 1.0e-01  E0 = -8.11045587   ± 7.16e-03  Grad norm = 1.7e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 5.5e-13  TPS UpdateT = 25.09 s TotT = 28.80   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 6.43e+10
+Iter 83  Alpha = 1.0e-01  E0 = -8.11465898   ± 6.36e-03  Grad norm = 1.4e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 5.2e-13  TPS UpdateT = 25.54 s TotT = 29.71   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.16e+11
+Iter 84  Alpha = 1.0e-01  E0 = -8.11649080   ± 8.75e-03  Grad norm = 9.8e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 4.6e-13  TPS UpdateT = 25.34 s TotT = 29.13   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.48e+11
+Iter 85  Alpha = 1.0e-01  E0 = -8.10945175   ± 7.09e-03  Grad norm = 7.7e+13  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 6.0e-13  TPS UpdateT = 25.57 s TotT = 29.24   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.21e+11
+Iter 86  Alpha = 1.0e-01  E0 = -8.11453343   ± 6.90e-03  Grad norm = 7.9e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 5.4e-13  TPS UpdateT = 26.41 s TotT = 30.10   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.55e+10
+Iter 87  Alpha = 1.0e-01  E0 = -8.10669024   ± 8.06e-03  Grad norm = 7.8e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 5.4e-13  TPS UpdateT = 25.97 s TotT = 29.68   s
+Iter 88  Alpha = 1.0e-01  E0 = -8.12440342   ± 8.52e-03  Grad norm = 6.8e+14  Accept rate = [0.07 ]SRSolver Iter = 97  NGrad norm = 6.0e-13  TPS UpdateT = 25.13 s TotT = 28.77   s
+Iter 89  Alpha = 1.0e-01  E0 = -8.13424111   ± 5.86e-03  Grad norm = 3.2e+14  Accept rate = [0.06 ]SRSolver Iter = 75  NGrad norm = 5.8e-13  TPS UpdateT = 19.27 s TotT = 22.95   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.05e+09
+Iter 90  Alpha = 1.0e-01  E0 = -8.10934789   ± 8.26e-03  Grad norm = 2.5e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 6.8e-13  TPS UpdateT = 25.88 s TotT = 29.55   s
+Iter 91  Alpha = 1.0e-01  E0 = -7.96361384   ± 2.73e-02  Grad norm = 1.3e+15  Accept rate = [0.06 ]SRSolver Iter = 85  NGrad norm = 6.5e-13  TPS UpdateT = 22.25 s TotT = 25.98   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 3.34e+11
+Iter 92  Alpha = 1.0e-01  E0 = -8.00181210   ± 2.35e-02  Grad norm = 3.4e+14  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 9.1e-13  TPS UpdateT = 25.50 s TotT = 29.22   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 4.50e+11
+Iter 93  Alpha = 1.0e-01  E0 = -8.10864676   ± 9.58e-03  Grad norm = 6.4e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 6.1e-13  TPS UpdateT = 25.28 s TotT = 29.40   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.39e+11
+Iter 94  Alpha = 1.0e-01  E0 = -8.11950047   ± 6.14e-03  Grad norm = 5.2e+13  Accept rate = [0.07 ]SRSolver Iter = 100 NGrad norm = 6.1e-13  TPS UpdateT = 25.62 s TotT = 29.40   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.11e+11
+Iter 95  Alpha = 1.0e-01  E0 = -8.13482644   ± 6.10e-03  Grad norm = 2.0e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 5.9e-13  TPS UpdateT = 25.80 s TotT = 29.50   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.39e+10
+Iter 96  Alpha = 1.0e-01  E0 = -8.12779224   ± 6.23e-03  Grad norm = 3.2e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 5.6e-13  TPS UpdateT = 25.89 s TotT = 29.78   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 9.99e+09
+Iter 97  Alpha = 1.0e-01  E0 = -8.11093926   ± 8.70e-03  Grad norm = 6.3e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 4.9e-13  TPS UpdateT = 25.56 s TotT = 29.30   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 2.42e+12
+Iter 98  Alpha = 1.0e-01  E0 = -8.11907627   ± 7.13e-03  Grad norm = 4.6e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 6.1e-13  TPS UpdateT = 25.86 s TotT = 29.55   s
+warning: convergence may fail on gradient solving linear equation. rkp1_2norm = 1.17e+11
+Iter 99  Alpha = 1.0e-01  E0 = -8.12761163   ± 6.28e-03  Grad norm = 3.9e+13  Accept rate = [0.06 ]SRSolver Iter = 100 NGrad norm = 6.7e-13  TPS UpdateT = 26.18 s TotT = 29.92   s

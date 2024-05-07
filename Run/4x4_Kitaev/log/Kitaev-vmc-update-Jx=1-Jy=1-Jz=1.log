@@ -1,0 +1,88 @@
+
+=====> VARIATIONAL MONTE-CARLO PROGRAM FOR PEPS <=====
+System size (lx, ly):                   (4, 4)
+PEPS bond dimension:                    1/6
+BMPS bond dimension:                    6/10
+BMPS Truncate Scheme:                   1
+Sampling numbers:                       100
+Monte Carlo sweep repeat times:         2
+PEPS update times:                      10
+PEPS update strategy:                   2
+Conjugate gradient diagonal shift:      0.01
+=====> TECHNICAL PARAMETERS <=====
+The number of processors (including master):64
+The number of threads per processor:    1
+Proc   35 warm up completes T = 16.6903s.
+Proc   19 warm up completes T = 16.7473s.
+Proc   37 warm up completes T = 16.7567s.
+Proc   23 warm up completes T = 16.7381s.
+Proc   30 warm up completes T = 16.8138s.
+Proc   16 warm up completes T = 16.791s.
+Proc   24 warm up completes T = 16.7542s.
+Proc   21 warm up completes T = 16.7656s.
+Proc   15 warm up completes T = 16.8157s.
+Proc   22 warm up completes T = 16.8506s.
+Proc   18 warm up completes T = 16.8423s.
+Proc   28 warm up completes T = 16.8189s.
+Proc   14 warm up completes T = 16.8558s.
+Proc   38 warm up completes T = 16.8238s.
+Proc   32 warm up completes T = 16.8612s.
+Proc   34 warm up completes T = 16.861s.
+Proc   25 warm up completes T = 16.823s.
+Proc   39 warm up completes T = 16.9195s.
+Proc   31 warm up completes T = 16.8944s.
+Proc   27 warm up completes T = 16.8475s.
+Proc   20 warm up completes T = 16.8662s.
+Proc   13 warm up completes T = 16.9441s.
+Proc   29 warm up completes T = 16.9383s.
+Proc   49 warm up completes T = 16.9111s.
+Proc   51 warm up completes T = 16.97s.
+Proc   36 warm up completes T = 16.9255s.
+Proc   12 warm up completes T = 16.9583s.
+Proc    9 warm up completes T = 16.9528s.
+Proc    2 warm up completes T = 16.9899s.
+Proc   52 warm up completes T = 17.0169s.
+Proc   33 warm up completes T = 16.9484s.
+Proc   54 warm up completes T = 17.0315s.
+Proc   10 warm up completes T = 16.9987s.
+Proc   53 warm up completes T = 17.0539s.
+Proc   17 warm up completes T = 17.0124s.
+Proc   11 warm up completes T = 16.9977s.
+Proc    6 warm up completes T = 17.0122s.
+Proc   55 warm up completes T = 17.032s.
+Proc    4 warm up completes T = 17.0674s.
+Proc 0    warm up completes T = 17.0684s.
+Proc   26 warm up completes T = 17.1141s.
+Proc    5 warm up completes T = 17.067s.
+Proc   48 warm up completes T = 17.0775s.
+Proc    1 warm up completes T = 17.1252s.
+Proc    8 warm up completes T = 17.0857s.
+Proc   50 warm up completes T = 17.2209s.
+Proc    3 warm up completes T = 17.1847s.
+Proc   58 warm up completes T = 17.293s.
+Proc   46 warm up completes T = 17.3442s.
+Proc   42 warm up completes T = 17.4105s.
+Proc   47 warm up completes T = 17.4255s.
+Proc   59 warm up completes T = 17.4369s.
+Proc   56 warm up completes T = 17.3946s.
+Proc   57 warm up completes T = 17.4172s.
+Proc    7 warm up completes T = 17.4894s.
+Proc   45 warm up completes T = 17.4867s.
+Proc   60 warm up completes T = 17.5732s.
+Proc   44 warm up completes T = 17.533s.
+Proc   61 warm up completes T = 17.6105s.
+Proc   63 warm up completes T = 17.5774s.
+Proc   62 warm up completes T = 17.6171s.
+Proc   43 warm up completes T = 17.7363s.
+Proc   41 warm up completes T = 17.8127s.
+Proc   40 warm up completes T = 17.9568s.
+Iter 0   Alpha = 2.0e-01  E0 = -10.35114995  ± 8.72e-03  Grad norm = 1.1e-01  Accept rate = [0.13 ]SRSolver Iter = 25  NGrad norm = 4.0e+00  TPS UpdateT = 7.15  s TotT = 18.70   s
+Iter 1   Alpha = 2.0e-01  E0 = -10.43000770  ± 1.88e-03  Grad norm = 3.4e-03  Accept rate = [0.15 ]SRSolver Iter = 32  NGrad norm = 3.1e-01  TPS UpdateT = 9.70  s TotT = 19.67   s
+Iter 2   Alpha = 2.0e-01  E0 = -10.43607707  ± 2.00e-03  Grad norm = 3.8e-03  Accept rate = [0.16 ]SRSolver Iter = 26  NGrad norm = 1.7e-01  TPS UpdateT = 7.45  s TotT = 17.93   s
+Iter 3   Alpha = 2.0e-01  E0 = -10.43513731  ± 2.02e-03  Grad norm = 8.4e-03  Accept rate = [0.15 ]SRSolver Iter = 26  NGrad norm = 1.8e-01  TPS UpdateT = 7.41  s TotT = 16.82   s
+Iter 4   Alpha = 2.0e-01  E0 = -10.43811438  ± 2.06e-03  Grad norm = 1.6e-03  Accept rate = [0.14 ]SRSolver Iter = 29  NGrad norm = 1.5e-01  TPS UpdateT = 8.49  s TotT = 17.85   s
+Iter 5   Alpha = 2.0e-01  E0 = -10.43764760  ± 1.74e-03  Grad norm = 1.5e-03  Accept rate = [0.15 ]SRSolver Iter = 28  NGrad norm = 1.2e-01  TPS UpdateT = 7.91  s TotT = 17.34   s
+Iter 6   Alpha = 2.0e-01  E0 = -10.43865287  ± 1.73e-03  Grad norm = 4.3e-03  Accept rate = [0.16 ]SRSolver Iter = 27  NGrad norm = 1.1e-01  TPS UpdateT = 7.79  s TotT = 17.18   s
+Iter 7   Alpha = 2.0e-01  E0 = -10.43732791  ± 1.61e-03  Grad norm = 2.2e-03  Accept rate = [0.14 ]SRSolver Iter = 28  NGrad norm = 1.4e-01  TPS UpdateT = 8.16  s TotT = 17.63   s
+Iter 8   Alpha = 2.0e-01  E0 = -10.44450419  ± 2.07e-03  Grad norm = 4.5e-03  Accept rate = [0.15 ]SRSolver Iter = 27  NGrad norm = 1.8e-01  TPS UpdateT = 7.92  s TotT = 17.36   s
+Iter 9   Alpha = 2.0e-01  E0 = -10.44165771  ± 1.81e-03  Grad norm = 2.0e-03  Accept rate = [0.15 ]SRSolver Iter = 29  NGrad norm = 1.1e-01  TPS UpdateT = 8.35  s TotT = 18.28   s

@@ -1,0 +1,78 @@
+
+=====> VARIATIONAL MONTE-CARLO PROGRAM FOR PEPS <=====
+System size (lx, ly):                   (4, 4)
+PEPS bond dimension:                    1/6
+BMPS bond dimension:                    6/10
+BMPS Truncate Scheme:                   1
+Sampling numbers:                       100
+Monte Carlo sweep repeat times:         2
+PEPS update times:                      10
+PEPS update strategy:                   2
+Conjugate gradient diagonal shift:      0.01
+=====> TECHNICAL PARAMETERS <=====
+The number of processors (including master):64
+The number of threads per processor:    1
+Proc   18 warm up completes T = 16.9383s.
+Proc   35 warm up completes T = 16.9051s.
+Proc   22 warm up completes T = 16.9238s.
+Proc   34 warm up completes T = 16.9574s.
+Proc   19 warm up completes T = 17.007s.
+Proc   11 warm up completes T = 17.0692s.
+Proc   63 warm up completes T = 17.0582s.
+Proc   23 warm up completes T = 17.0526s.
+Proc   21 warm up completes T = 17.0547s.
+Proc   15 warm up completes T = 17.0817s.
+Proc   57 warm up completes T = 17.0906s.
+Proc   39 warm up completes T = 17.0848s.
+Proc   14 warm up completes T = 17.0707s.
+Proc    3 warm up completes T = 17.084s.
+Proc   50 warm up completes T = Proc 17.1614s.
+  30 warm up completes T = 17.1073s.Proc   38 warm up completes T = 
+17.107s.
+Proc   49 warm up completes T = 17.1732s.
+Proc   62 warm up completes T = 17.1556s.
+Proc   58 warm up completes T = 17.1703s.
+Proc   37 warm up completes T = 17.1585s.
+Proc    7 warm up completes T = 17.1962s.
+Proc   13 warm up completes T = 17.185s.
+Proc   10 warm up completes T = 17.2275s.
+Proc   61 warm up completes T = 17.2112s.
+Proc   55 warm up completes T = 17.2404s.
+Proc   33 warm up completes T = 17.1923s.
+Proc    5 warm up completes T = 17.1924s.
+Proc   46 warm up completes T = 17.193s.
+Proc   31 warm up completes T = 17.2196s.
+Proc   43 warm up completes T = 17.2578s.
+Proc   45 warm up completes T = 17.228s.
+Proc   26 warm up completes T = 17.2605s.
+Proc   17 warm up completes T = 17.2285s.
+Proc   59 warm up completes T = 17.2299s.
+Proc    1 warm up completes T = 17.2431s.
+Proc   12 warm up completes T = 17.319s.
+Proc   47 warm up completes T = 17.3017s.
+Proc    6 warm up completes T = 17.3268s.
+Proc   42 warm up completes T = 17.3403s.
+Proc   25 warm up completes T = 17.3284s.
+Proc 0    warm up completes T = 17.375s.
+Proc   53 warm up completes T = 17.3347s.
+Proc    4 warm up completes T = 17.345s.
+Proc    2 warm up completes T = 17.3988s.
+Proc   27 warm up completes T = 17.4162s.
+Proc   54 warm up completes T = 17.4038s.
+Proc   51 warm up completes T = 17.4951s.
+Proc   29 warm up completes T = 17.4755s.
+Proc   36 warm up completes T = 17.5024s.
+Proc   28 warm up completes T = 17.6616s.
+Proc   20 warm up completes T = 17.7075s.
+Proc    9 warm up completes T = 17.6964s.
+Proc   56 warm up completes T = 17.8109s.
+Proc   60 warm up completes T = 17.8697s.
+Proc   16 warm up completes T = 17.9364s.
+Proc   32 warm up completes T = 17.8906s.
+Proc   44 warm up completes T = 18.044s.
+Proc   48 warm up completes T = 18.1057s.
+Proc   24 warm up completes T = 18.1439s.
+Proc    8 warm up completes T = 18.2736s.
+Proc   40 warm up completes T = 18.2794s.
+Proc   41 warm up completes T = 18.3725s.
+Proc   52 warm up completes T = 18.4437s.

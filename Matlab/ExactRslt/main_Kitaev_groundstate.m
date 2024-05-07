@@ -2,7 +2,7 @@ clear;
 Model_Para.L = 4;
 Model_Para.Jx = 1;
 Model_Para.Jy = 1;
-Model_Para.Jz = 0.01;
+Model_Para.Jz = 1;
 
 [ Intr ] = IntrcMap_Kitaev(Model_Para);
 A = Get_A_Mat(Model_Para, Intr);
