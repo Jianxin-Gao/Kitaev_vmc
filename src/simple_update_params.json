@@ -4,11 +4,14 @@
     "Lx": 4,
     "RemoveCorner": true,
     "J2": 0.0,
-    "TruncErr": 1e-5,
-    "Dmin": 4,
-    "Dmax": 4,
-    "Tau": 0.2,
-    "Step": 10,
-    "ThreadNum": 2
+    "Jx": 1,
+    "Jy": 0.01,
+    "Jz": 1,
+    "TruncErr": 1e-15,
+    "Dmin": 8,
+    "Dmax": 8,
+    "Tau": 0.1,
+    "Step": 100,
+    "ThreadNum": 1
   }
 }
