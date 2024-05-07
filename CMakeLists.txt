@@ -153,7 +153,8 @@ add_executable(Kitaev_vmc_update
         src/Kitaev_vmc_update.cpp
         src/myutil.h
         src/myutil.cpp
-        src/Kitaev_tps_sample_Z2_update.h)
+        src/Kitaev_tps_sample_Z2_update.h
+        src/Kitaev_tps_sample_Z2_3site_update.h)
 
 add_executable(test
         src/main.cpp)
