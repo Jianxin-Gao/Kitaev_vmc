@@ -10,11 +10,12 @@
 #include "params_parser.h"
 #include "myutil.h"
 #include "spin_onehalf_Kitaev.h"
-#include "Kitaev_tps_sample_Z2_update.h"
+//#include "Kitaev_tps_sample_Z2_update.h"
+#include "Kitaev_tps_sample_Z2_3site_update.h"
 
 using namespace qlpeps;
 
-using TPSSampleT = KitaevTPSSampleZ2Flip<TenElemT, U1QN>;
+using TPSSampleT = SquareTPSSample3SiteZ2Flip<TenElemT, U1QN>;
 
 int main(int argc, char **argv) {
     boost::mpi::environment env;
