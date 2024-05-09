@@ -49,7 +49,7 @@ namespace qlpeps {
         double e0 = 0.0;
 
 #ifdef QLPEPS_TIMING_MODE
-        Timer vertical_nn_projection_z_timer("vertical_nn_projection_z");
+        Timer vertical_nn_projection_x_timer("vertical_nn_projection_x");
 #endif
         for (size_t col = 0; col < this->lx_ - 1; col ++){
             if ((col & 1) == 0) {
@@ -67,7 +67,7 @@ namespace qlpeps {
         }
 
 #ifdef QLPEPS_TIMING_MODE
-        vertical_nn_projection_z_timer.PrintElapsed();
+        vertical_nn_projection_x_timer.PrintElapsed();
   Timer horizontal_nn_projection_y_timer("horizontal_nn_projection_y");
 #endif
         for (size_t col = 0; col < this->lx_; col ++){
@@ -86,7 +86,7 @@ namespace qlpeps {
         }
 #ifdef QLPEPS_TIMING_MODE
         vertical_nn_projection_y_timer.PrintElapsed();
-  Timer horizontal_nn_projection_x_timer("horizontal_nn_projection_x");
+  Timer horizontal_nn_projection_z_timer("horizontal_nn_projection_z");
 #endif
         for (size_t col = 0; col < this->lx_; col ++){
             if ((col & 1) == 0) {
@@ -103,7 +103,7 @@ namespace qlpeps {
             }
         }
 #ifdef QLPEPS_TIMING_MODE
-        horizontal_nn_projection_x_timer.PrintElapsed();
+        horizontal_nn_projection_z_timer.PrintElapsed();
 #endif
         double sweep_time = simple_update_sweep_timer.Elapsed();
         auto [dmin, dmax] = this->peps_.GetMinMaxBondDim();
