@@ -10,16 +10,16 @@ count = 1;
 for col = 0:1:L-2
     if mod(col, 2) == 0
         for row = 0:2:L-2
-            int_cell{count, 1} = 4*col+row+1;
-            int_cell{count, 2} = 4*col+row+1 + L;
+            int_cell{count, 1} = L*col+row+1;
+            int_cell{count, 2} = L*col+row+1 + L;
             int_cell{count, 3} = 'Sx';
             int_cell{count, 4} = Model_Para.Jx;
             count = count + 1;
         end
     else
         for row = 1:2:L-1
-            int_cell{count, 1} = 4*col+row+1;
-            int_cell{count, 2} = 4*col+row+1 + L;
+            int_cell{count, 1} = L*col+row+1;
+            int_cell{count, 2} = L*col+row+1 + L;
             int_cell{count, 3} = 'Sx';
             int_cell{count, 4} = Model_Para.Jx;
             count = count + 1;
@@ -30,16 +30,16 @@ end
 for col = 0:1:L-1
     if mod(col, 2) == 0
         for row = 1:2:L-2
-            int_cell{count, 1} = 4*col+row+1 + 1;
-            int_cell{count, 2} = 4*col+row+1;
+            int_cell{count, 1} = L*col+row+1 + 1;
+            int_cell{count, 2} = L*col+row+1;
             int_cell{count, 3} = 'Sy';
             int_cell{count, 4} = Model_Para.Jy;
             count = count + 1;
         end
     else
         for row = 0:2:L-2
-            int_cell{count, 1} = 4*col+row+1 + 1;
-            int_cell{count, 2} = 4*col+row+1;
+            int_cell{count, 1} = L*col+row+1 + 1;
+            int_cell{count, 2} = L*col+row+1;
             int_cell{count, 3} = 'Sy';
             int_cell{count, 4} = Model_Para.Jy;
             count = count + 1;
@@ -50,16 +50,16 @@ end
 for col = 0:1:L-1
     if mod(col, 2) == 0
         for row = 0:2:L-2
-            int_cell{count, 1} = 4*col+row+1;
-            int_cell{count, 2} = 4*col+row+1 + 1;
+            int_cell{count, 1} = L*col+row+1;
+            int_cell{count, 2} = L*col+row+1 + 1;
             int_cell{count, 3} = 'Sz';
             int_cell{count, 4} = Model_Para.Jz;
             count = count + 1;
         end
     else
         for row = 1:2:L-2
-            int_cell{count, 1} = 4*col+row+1;
-            int_cell{count, 2} = 4*col+row+1 + 1;
+            int_cell{count, 1} = L*col+row+1;
+            int_cell{count, 2} = L*col+row+1 + 1;
             int_cell{count, 3} = 'Sz';
             int_cell{count, 4} = Model_Para.Jz;
             count = count + 1;
