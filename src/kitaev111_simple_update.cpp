@@ -15,6 +15,10 @@
 #include "./params_parser.h"
 
 int main(int argc, char **argv) {
+  if (argc < 2) {
+    std::cout << "Loss parameter. " << std::endl;
+    std::cout << "Usage : ./kitaev111_simple_update <simple update params file>" << std::endl;
+  }
   SimpleUpdateParams params(argv[1]);
   // Get ham_hei_nn for x, y, z interaction
   Tensor ham_hei_nn_x = Tensor({pb_in, pb_out, pb_in, pb_out});
