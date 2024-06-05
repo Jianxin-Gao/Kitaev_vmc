@@ -1,5 +1,5 @@
 //
-// Created by 高建鑫 on 2024/3/16.
+// Created by Jian-Xin Gao on 2024/3/16.
 //
 
 #ifndef KITAEV_KITAEV_LATTICE_SIMPLE_UPDATE_H

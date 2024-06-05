@@ -9,9 +9,9 @@
 //#include "qlpeps/algorithm/vmc_update/wave_function_component_classes/square_tps_sample_full_space_nn_flip.h"
 #include "params_parser.h"
 #include "myutil.h"
-#include "spin_onehalf_Kitaev.h"
+#include "spin_onehalf_kitaev.h"
 //#include "Kitaev_tps_sample_Z2_update.h"
-#include "Kitaev_tps_sample_Z2_3site_update.h"
+#include "kitaev_tps_sample_Z2_3site_update.h"
 
 using namespace qlpeps;
 
@@ -40,9 +40,9 @@ int main(int argc, char **argv) {
 
         using Model = SpinOneHalfKitaev<TenElemT, U1QN>;
         VMCPEPSExecutor<TenElemT, U1QN, TPSSampleT, Model> *executor(nullptr);
-        double Jx = params.Jx;
-        double Jy = params.Jy;
-        double Jz = params.Jz;
+        double Jx = params.Kx;
+        double Jy = params.Ky;
+        double Jz = params.Kz;
         Model JxJyJzSolver(Jx, Jy, Jz);
         if (IsFileExist(optimize_para.wavefunction_path + "/tps_ten0_0_0.qlten")) {// test if split index tps tensors exist
             executor = new VMCPEPSExecutor<TenElemT, U1QN, TPSSampleT, Model>(optimize_para,

@@ -1,15 +1,11 @@
-/*
- * File Name: qldouble.h
- * Description: Define the types and constant in Kitaev PEPS project
- *
- */
 
-#ifndef SPIN_QLDOUBLE_H
-#define SPIN_QLDOUBLE_H
+
+#ifndef SPIN_COMPLEX_H
+#define SPIN_COMPLEX_H
 
 #include "qlten/qlten.h"
 
-using TenElemT = qlten::QLTEN_Double;
+using TenElemT = qlten::QLTEN_Complex;
 using qlten::special_qn::U1QN;
 using qlten::QLTensor;
 
@@ -27,4 +23,4 @@ const IndexT pb_in = qlten::InverseIndex(pb_out);
 
 std::string peps_path = "peps";
 
-#endif //SPIN_QLDOUBLE_H
+#endif //SPIN_COMPLEX_H
