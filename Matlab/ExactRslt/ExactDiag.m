@@ -65,7 +65,7 @@ sigma_z=sparse([1 0; 0 -1]);
         +kron(speye(2^13), kron(kron(sigma_z, sigma_z), speye(2^1)));    %14-15 site
         
 %% magnatic field
-H_h = sparse(0);E
+H_h = sparse(0);
     for i = 1:16
         H_h = H_h + (kron(kron(speye(2^(i-1)), sigma_x), speye(2^(16-i))) + ...
             kron(kron(speye(2^(i-1)), sigma_y), speye(2^(16-i))) + ...
