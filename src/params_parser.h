@@ -1,9 +1,5 @@
-//
-// Created by haoxinwang on 28/09/2023.
-//
-
-#ifndef HEISENBERGVMCPEPS_PARAMS_PARSER_H
-#define HEISENBERGVMCPEPS_PARAMS_PARSER_H
+#ifndef KITAEV_VMCPEPS_PARAMS_PARSER_H
+#define KITAEV_VMCPEPS_PARAMS_PARSER_H
 
 #include "qlmps/case_params_parser.h"
 #include "qlpeps/algorithm/vmc_update/vmc_peps.h"
@@ -13,10 +9,10 @@ struct SimpleUpdateParams : public qlmps::CaseParamsParserBasic {
     Lx = ParseInt("Lx");
     Ly = ParseInt("Ly");
     RemoveCorner = ParseBool("RemoveCorner");
-    J2 = ParseDouble("J2");
-    Jx = ParseDouble("Jx");
-    Jy = ParseDouble("Jy");
-    Jz = ParseDouble("Jz");
+    H = ParseDouble("H");
+    Kx = ParseDouble("Kx");
+    Ky = ParseDouble("Ky");
+    Kz = ParseDouble("Kz");
     TruncErr = ParseDouble("TruncErr");
     Dmin = ParseInt("Dmin");
     Dmax = ParseInt("Dmax");
@@ -28,10 +24,10 @@ struct SimpleUpdateParams : public qlmps::CaseParamsParserBasic {
   size_t Ly;
   size_t Lx;
   bool RemoveCorner;
-  double J2;
-  double Jx;
-  double Jy;
-  double Jz;
+  double H; // [111] direction magnetic field strength
+  double Kx;
+  double Ky;
+  double Kz;
   double TruncErr;
   size_t Dmin;
   size_t Dmax;
@@ -45,10 +41,10 @@ struct VMCUpdateParams : public qlmps::CaseParamsParserBasic {
   VMCUpdateParams(const char *f) : CaseParamsParserBasic(f) {
     Lx = ParseInt("Lx");
     Ly = ParseInt("Ly");
-    J2 = ParseDouble("J2");
-      Jx = ParseDouble("Jx");
-      Jy = ParseDouble("Jy");
-      Jz = ParseDouble("Jz");
+    H = ParseDouble("H");
+    Kx = ParseDouble("Kx");
+    Ky = ParseDouble("Ky");
+    Kz = ParseDouble("Kz");
     Db_min = ParseInt("Dbmps_min");
     Db_max = ParseInt("Dbmps_max");
     TruncErr = ParseDouble("TruncErr");
@@ -77,7 +73,7 @@ struct VMCUpdateParams : public qlmps::CaseParamsParserBasic {
 
   size_t Ly;
   size_t Lx;
-  double J2;
+  double H; // [111] direction magnetic field strength
   size_t Db_min;
   size_t Db_max;
   double TruncErr;
@@ -94,9 +90,9 @@ struct VMCUpdateParams : public qlmps::CaseParamsParserBasic {
   qlpeps::WAVEFUNCTION_UPDATE_SCHEME update_scheme;
   std::vector<double> step_len;
   size_t ThreadNum;
-    double Jx;
-    double Jy;
-    double Jz;
+  double Kx;
+  double Ky;
+  double Kz;
 };
 
 struct DMRGCaseParams : public qlmps::CaseParamsParserBasic {
@@ -153,4 +149,4 @@ struct DMRGCaseParams : public qlmps::CaseParamsParserBasic {
   size_t SymmetryMode;//useless upto now
 };
 
-#endif //HEISENBERGVMCPEPS_PARAMS_PARSER_H
+#endif //KITAEV_VMCPEPS_PARAMS_PARSER_H

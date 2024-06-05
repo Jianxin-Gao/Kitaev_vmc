@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.23)
 project(Kitaev)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_OSX_ARCHITECTURES "arm64")
+#set(CMAKE_OSX_ARCHITECTURES "arm64")
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${PROJECT_SOURCE_DIR}/cmake/")
 set(CMAKE_SOURCE_DIR "${PROJECT_SOURCE_DIR}/src/")
 
@@ -144,17 +144,21 @@ link_libraries(
         ${MPI_mpi_LIBRARY}
 )
 
-add_executable(Kitaev_simple_update
-        src/Kitaev_simple_update.cpp
-        src/spin_onehalf_Kitaev.h
+add_executable(kitaev_simple_update
+        src/kitaev_simple_update.cpp
 )
 
-add_executable(Kitaev_vmc_update
-        src/Kitaev_vmc_update.cpp
-        src/myutil.h
-        src/myutil.cpp
-        src/Kitaev_tps_sample_Z2_update.h
-        src/Kitaev_tps_sample_Z2_3site_update.h)
+add_executable(kitaev111_simple_update
+        src/kitaev111_simple_update.cpp
+)
+
+add_executable(kitaev_vmc_update
+        src/kitaev_vmc_update.cpp
+        src/myutil.cpp)
+
+add_executable(kitaev111_vmc_update
+        src/kitaev111_vmc_update.cpp
+        src/myutil.cpp)
 
 add_executable(test
         src/main.cpp)
