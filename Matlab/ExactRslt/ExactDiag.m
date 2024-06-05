@@ -3,16 +3,17 @@ clear; clc;
 N=4*4;  %总自旋数目
 
 %% 生成哈密顿量矩阵
-[H_x,H_y,H_z]=createHamiltonian();
+[H_x,H_y,H_z,H_h]=createHamiltonian();
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Jx=1;
 Jy=1;
 Jz=1;
+h = 0.2;
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-H=Jx*H_x+Jy*H_y+Jz*H_z;  
+H=Jx*H_x+Jy*H_y+Jz*H_z+h*H_h;  
 
 tic
-[V,D]=eigs(H,1000,'sa');   % 稀疏矩阵对角化
+[V,D]=eigs(H,1,'sa');   % 稀疏矩阵对角化
 toc
 
 sigma_z = sparse([1, 0; 0, -1]);
@@ -32,7 +33,7 @@ end
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-function [H_x,H_y,H_z] = createHamiltonian(~)
+function [H_x,H_y,H_z,H_h] = createHamiltonian(~)
 %% 16个格点的Kitaev模型
 sigma_x=sparse([0 1; 1 0]);  
 sigma_y=sparse([0 -1i;1i 0]);
@@ -63,4 +64,12 @@ sigma_z=sparse([1 0; 0 -1]);
         +kron(speye(2^10), kron(kron(sigma_z, sigma_z), speye(2^4)))+... %11-12 site
         +kron(speye(2^13), kron(kron(sigma_z, sigma_z), speye(2^1)));    %14-15 site
         
+%% magnatic field
+H_h = sparse(0);
+    for i = 1:16
+        H_h = H_h + (kron(kron(speye(2^(i-1)), sigma_x), speye(2^(16-i))) + ...
+            kron(kron(speye(2^(i-1)), sigma_y), speye(2^(16-i))) + ...
+            kron(kron(speye(2^(i-1)), sigma_z), speye(2^(16-i))));
+        
+    end
 end
