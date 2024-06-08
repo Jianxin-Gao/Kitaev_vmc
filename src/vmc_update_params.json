@@ -4,10 +4,10 @@
     "Lx": 4,
     "H": 0,
     "Kx": 1,
-    "Ky": 0.01,
+    "Ky": 1,
     "Kz": 1,
     "Dbmps_min": 8,
-    "Dbmps_max": 16,
+    "Dbmps_max": 8,
     "TruncErr": 1e-8,
     "MC_samples": 100,
     "WarmUp": 300,
@@ -21,7 +21,7 @@
     "MPSCompressScheme": 0,
     "StepLengthFirst": 0.1,
     "StepLengthDecrease": 0,
-    "UpdateNum": 100,
+    "UpdateNum": 3,
     "UpdateScheme": 2,
     "ThreadNum": 1
   }

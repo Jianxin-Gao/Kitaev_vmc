@@ -184,7 +184,6 @@ ObservablesLocal<TenElemT> SpinOneHalfKitaev111<TenElemT, QNT>::SampleMeasure(
 ) {
   ObservablesLocal<TenElemT> res;
   TenElemT energy(0);
-  const double bond_energy_extremly_large = 1.0e5;
   TensorNetwork2D<TenElemT, QNT> &tn = tps_sample->tn;
   const size_t lx = tn.cols(), ly = tn.rows();
   res.bond_energys_loc.reserve(lx * ly * 2);

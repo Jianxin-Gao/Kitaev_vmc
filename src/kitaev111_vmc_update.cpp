@@ -20,16 +20,23 @@ int main(int argc, char **argv) {
   VMCUpdateParams params(argv[1]);
 
   qlten::hp_numeric::SetTensorManipulationThreads(params.ThreadNum);
+  const size_t Ly = params.Ly;
+  const size_t Lx = params.Lx;
+  const size_t N = Lx * Ly;
+  Configuration config_init(Ly, Lx);
+  for (size_t row = 0; row < Ly; row++) {
+    for (size_t col = 0; col < Lx; col++) {
+      config_init({row, col}) = ((Ly) % 2 ? 0 : 1);
+    }
 
-  size_t N = params.Lx * params.Ly;
+  }
   qlpeps::VMCOptimizePara optimize_para(
       BMPSTruncatePara(params.Db_min, params.Db_max,
                        params.TruncErr,
                        params.MPSCompressScheme, 1e-8, 5),
       params.MC_samples, params.WarmUp,
       params.MCLocalUpdateSweepsBetweenSample,
-      std::vector<size_t>{N / 2, N / 2},
-      params.Ly, params.Lx,
+      config_init,
       params.step_len,
       params.update_scheme,
       ConjugateGradientParams(params.CGMaxIter, params.CGTol, params.CGResidueRestart, params.CGDiagShift));
