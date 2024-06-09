@@ -8,6 +8,8 @@
  *          + h \sum_i (\sigma_i^x + \sigma_i^y +  \sigma_i^z)
  *
  * Same convention as in Ref https://www.nature.com/articles/s41467-022-28014-3
+ *
+ * For OBC system, the Hamiltonian terms on boundary are not faithfully realized in this code
  */
 
 #include "./kitaev_lattice_simple_update.h"
@@ -27,20 +29,21 @@ int main(int argc, char **argv) {
 
   auto Kx = params.Kx, Ky = params.Ky, Kz = params.Kz;
   auto H = params.H;
-  // Kx * sigma_x * sigma_x + H * sigma_x * id + H * id * sigma_x;
+  // Kx * sigma_x * sigma_x + H/3 * [(sigma_x + sigma_y + sigma_z) * id + id * (sigma_x + sigma_y + sigma_z)];
   ham_hei_nn_x({0, 1, 1, 0}) = Kx;
   ham_hei_nn_x({1, 0, 1, 0}) = Kx;
   ham_hei_nn_x({0, 1, 0, 1}) = Kx;
   ham_hei_nn_x({1, 0, 0, 1}) = Kx;
-  ham_hei_nn_x({0, 1, 0, 0}) = H; //sigma_x * id
-  ham_hei_nn_x({1, 0, 0, 0}) = H;
-  ham_hei_nn_x({0, 1, 1, 1}) = H;
-  ham_hei_nn_x({1, 0, 1, 1}) = H;
-  ham_hei_nn_x({0, 0, 0, 1}) = H; //id * sigma_x
-  ham_hei_nn_x({0, 0, 1, 0}) = H;
-  ham_hei_nn_x({1, 1, 0, 1}) = H;
-  ham_hei_nn_x({1, 1, 1, 0}) = H;
-
+  ham_hei_nn_x({0, 1, 0, 0}) = std::complex<double>(H, H) / 3.0; //(sigma_x + sigma_y)* id
+  ham_hei_nn_x({1, 0, 0, 0}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_x({0, 1, 1, 1}) = std::complex<double>(H, H) / 3.0;
+  ham_hei_nn_x({1, 0, 1, 1}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_x({0, 0, 0, 1}) = std::complex<double>(H, H) / 3.0; //id * (sigma_x + sigma_y)*
+  ham_hei_nn_x({0, 0, 1, 0}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_x({1, 1, 0, 1}) = std::complex<double>(H, H) / 3.0;
+  ham_hei_nn_x({1, 1, 1, 0}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_x({0, 0, 0, 0}) = 2 * H / 3.0;
+  ham_hei_nn_x({1, 1, 1, 1}) = -2 * H / 3.0;
   // Ky * sigma_y * simga_y + H * sigma_y * id + H * id * sigma_y;
   // sigma_y = ( 0, -i; i, 0)
   // 0 : up ; 1 : down
@@ -48,20 +51,30 @@ int main(int argc, char **argv) {
   ham_hei_nn_y({1, 0, 1, 0}) = -Ky;
   ham_hei_nn_y({0, 1, 0, 1}) = -Ky;
   ham_hei_nn_y({1, 0, 0, 1}) = Ky;
-  ham_hei_nn_y({0, 1, 0, 0}) = TenElemT(0, H); //sigma_y * id, pure imaginary number
-  ham_hei_nn_y({1, 0, 0, 0}) = TenElemT(0, -H);
-  ham_hei_nn_y({0, 1, 1, 1}) = TenElemT(0, H);
-  ham_hei_nn_y({1, 0, 1, 1}) = TenElemT(0, -H);
-  ham_hei_nn_y({0, 0, 0, 1}) = TenElemT(0, H); //id * sigma_y
-  ham_hei_nn_y({0, 0, 1, 0}) = TenElemT(0, -H);
-  ham_hei_nn_y({1, 1, 0, 1}) = TenElemT(0, H);
-  ham_hei_nn_y({1, 1, 1, 0}) = TenElemT(0, -H);
+  ham_hei_nn_y({0, 1, 0, 0}) = std::complex<double>(H, H) / 3.0; //(sigma_x + sigma_y)* id
+  ham_hei_nn_y({1, 0, 0, 0}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_y({0, 1, 1, 1}) = std::complex<double>(H, H) / 3.0;
+  ham_hei_nn_y({1, 0, 1, 1}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_y({0, 0, 0, 1}) = std::complex<double>(H, H) / 3.0; //id * (sigma_x + sigma_y)*
+  ham_hei_nn_y({0, 0, 1, 0}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_y({1, 1, 0, 1}) = std::complex<double>(H, H) / 3.0;
+  ham_hei_nn_y({1, 1, 1, 0}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_y({0, 0, 0, 0}) = 2 * H / 3.0;  //( H * sigma_z * id + H * id * sigma_z)/3
+  ham_hei_nn_y({1, 1, 1, 1}) = -2 * H / 3.0;
 
-  // Kz * sigma_z * simga_z + H * sigma_z * id + H * id * sigma_z;
-  ham_hei_nn_z({0, 0, 0, 0}) = Kz + 2 * H;
+  // Kz * sigma_z * simga_z +H/3 * [(sigma_x + sigma_y + sigma_z) * id + id * (sigma_x + sigma_y + sigma_z)];
+  ham_hei_nn_z({0, 0, 0, 0}) = Kz + 2 * H / 3;
   ham_hei_nn_z({1, 1, 0, 0}) = -Kz;
   ham_hei_nn_z({0, 0, 1, 1}) = -Kz;
-  ham_hei_nn_z({1, 1, 1, 1}) = Kz - 2 * H;
+  ham_hei_nn_z({1, 1, 1, 1}) = Kz - 2 * H / 3;
+  ham_hei_nn_z({0, 1, 0, 0}) = std::complex<double>(H, H) / 3.0; //(sigma_x + sigma_y)* id
+  ham_hei_nn_z({1, 0, 0, 0}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_z({0, 1, 1, 1}) = std::complex<double>(H, H) / 3.0;
+  ham_hei_nn_z({1, 0, 1, 1}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_z({0, 0, 0, 1}) = std::complex<double>(H, H) / 3.0; //id * (sigma_x + sigma_y)*
+  ham_hei_nn_z({0, 0, 1, 0}) = std::complex<double>(H, -H) / 3.0;
+  ham_hei_nn_z({1, 1, 0, 1}) = std::complex<double>(H, H) / 3.0;
+  ham_hei_nn_z({1, 1, 1, 0}) = std::complex<double>(H, -H) / 3.0;
 
   qlten::hp_numeric::SetTensorManipulationThreads(params.ThreadNum);
 

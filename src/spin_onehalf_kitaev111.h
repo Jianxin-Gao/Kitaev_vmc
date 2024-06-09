@@ -68,7 +68,7 @@ TenElemT SpinOneHalfKitaev111<TenElemT, QNT>::CalEnergyAndHoles(const SITPS *spl
       if constexpr (calchols) {
         hole_res(site1) = Dag(tn.PunchHole(site1, HORIZONTAL));
       }
-      size_t config1 = config(site1);
+      size_t config1 = config(site1);  //  0 : up ; 1 : down
       energy += (config1 ? -H_ : H_); // H * sigma_z term
       TenElemT psi_flip = tn.ReplaceOneSiteTrace(site1, (*split_index_tps)(site1)[1 - config1], HORIZONTAL);
       TenElemT ratio = psi_flip * inv_psi;
