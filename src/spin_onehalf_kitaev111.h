@@ -72,7 +72,7 @@ TenElemT SpinOneHalfKitaev111<TenElemT, QNT>::CalEnergyAndHoles(const SITPS *spl
       energy += (config1 ? -H_ : H_); // H * sigma_z term
       TenElemT psi_flip = tn.ReplaceOneSiteTrace(site1, (*split_index_tps)(site1)[1 - config1], HORIZONTAL);
       TenElemT ratio = psi_flip * inv_psi;
-      energy += ratio * H_ * (config1 ? std::complex<double>(1, -1) : std::complex<double>(1, 1));
+      energy += ComplexConjugate(ratio) * H_ * (config1 ? std::complex<double>(1, -1) : std::complex<double>(1, 1));
 
       if (((row + col) & 1) == 0 && col + 1 < tn.cols()) {
         //Calculate horizontal bond energy contribution
@@ -82,7 +82,7 @@ TenElemT SpinOneHalfKitaev111<TenElemT, QNT>::CalEnergyAndHoles(const SITPS *spl
                                                 (*split_index_tps)(site1)[1 - config1],
                                                 (*split_index_tps)(site2)[1 - config(site2)]);
         TenElemT ratio = psi_ex * inv_psi;
-        energy += ratio * Kx_; // For Kx
+        energy += ComplexConjugate(ratio) * Kx_; // For Kx
       }
 
       if (col + 1 < tn.cols()) {
@@ -121,11 +121,10 @@ TenElemT SpinOneHalfKitaev111<TenElemT, QNT>::CalEnergyAndHoles(const SITPS *spl
                                                   (*split_index_tps)(site1)[1 - config(site1)],
                                                   (*split_index_tps)(site2)[1 - config(site2)]);
           TenElemT ratio = psi_ex * inv_psi;
-
           if (config(site1) == config(site2)) {
-            energy += -ratio * (Ky_); // For Ky
+            energy += -ComplexConjugate(ratio) * (Ky_); // For Ky
           } else {
-            energy += ratio * (Ky_); // For Ky
+            energy += ComplexConjugate(ratio) * (Ky_); // For Ky
           }
         }
         if (row < tn.rows() - 2) {
@@ -151,9 +150,9 @@ TenElemT SpinOneHalfKitaev111<TenElemT, QNT>::CalEnergyAndHoles(const SITPS *spl
           TenElemT ratio = psi_ex * inv_psi;
 
           if (config(site1) == config(site2)) {
-            energy += -ratio * (Ky_); // For Ky
+            energy += -ComplexConjugate(ratio) * (Ky_); // For Ky
           } else {
-            energy += ratio * (Ky_); // For Ky
+            energy += ComplexConjugate(ratio) * (Ky_); // For Ky
           }
         }
         if (row < tn.rows() - 2) {
