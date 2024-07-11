@@ -44,7 +44,6 @@ TenElemT SpinOneHalfKitaev111<TenElemT, QNT>::CalEnergyAndHoles(const SITPS *spl
                                                                 WaveFunctionComponentType *tps_sample,
                                                                 TensorNetwork2D<TenElemT, QNT> &hole_res) {
   TenElemT energy(0);
-  bool has_unreasonable_bond_energy(false);
   TensorNetwork2D<TenElemT, QNT> &tn = tps_sample->tn;
   const Configuration &config = tps_sample->config;
   const BMPSTruncatePara &trunc_para = SquareTPSSampleNNExchange<TenElemT, QNT>::trun_para;
@@ -104,73 +103,36 @@ TenElemT SpinOneHalfKitaev111<TenElemT, QNT>::CalEnergyAndHoles(const SITPS *spl
     inv_psi = 1.0 / tps_sample->amplitude;
     psi_gather.push_back(tps_sample->amplitude);
 
-    if ((col & 1) == 0) {
-      for (size_t row = 0; row + 1 < tn.rows(); row++) {
-        const SiteIdx site1 = {row, col};
-        const SiteIdx site2 = {row + 1, col};
+    for (size_t row = 0; row + 1 < tn.rows(); row++) {
+      const SiteIdx site1 = {row, col};
+      const SiteIdx site2 = {row + 1, col};
 
-        if ((row & 1) == 0) {
-          if (config(site1) == config(site2)) {
-            energy += (Kz_); // For Kz
-          } else {
-            energy += -(Kz_); // For Kz
-          }
-
+      if ((row + col) % 2 == 0) {
+        if (config(site1) == config(site2)) {
+          energy += (Kz_); // For Kz
         } else {
-          TenElemT psi_ex = tn.ReplaceNNSiteTrace(site1, site2, VERTICAL,
-                                                  (*split_index_tps)(site1)[1 - config(site1)],
-                                                  (*split_index_tps)(site2)[1 - config(site2)]);
-          TenElemT ratio = psi_ex * inv_psi;
-          if (config(site1) == config(site2)) {
-            energy += -ComplexConjugate(ratio) * (Ky_); // For Ky
-          } else {
-            energy += ComplexConjugate(ratio) * (Ky_); // For Ky
-          }
+          energy += -(Kz_); // For Kz
         }
-        if (row < tn.rows() - 2) {
-          tn.BTenMoveStep(DOWN);
+
+      } else {
+        TenElemT psi_ex = tn.ReplaceNNSiteTrace(site1, site2, VERTICAL,
+                                                (*split_index_tps)(site1)[1 - config(site1)],
+                                                (*split_index_tps)(site2)[1 - config(site2)]);
+        TenElemT ratio = psi_ex * inv_psi;
+        if (config(site1) == config(site2)) {
+          energy += -ComplexConjugate(ratio) * (Ky_); // For Ky
+        } else {
+          energy += ComplexConjugate(ratio) * (Ky_); // For Ky
         }
       }
-
-    } else {
-      for (size_t row = 0; row + 1 < tn.rows(); row++) {
-        const SiteIdx site1 = {row, col};
-        const SiteIdx site2 = {row + 1, col};
-
-        if ((row & 1) == 1) {
-          if (config(site1) == config(site2)) {
-            energy += Kz_; // For Kz
-          } else {
-            energy += -Kz_; // For Kz
-          }
-        } else {
-          TenElemT psi_ex = tn.ReplaceNNSiteTrace(site1, site2, VERTICAL,
-                                                  (*split_index_tps)(site1)[1 - config(site1)],
-                                                  (*split_index_tps)(site2)[1 - config(site2)]);
-          TenElemT ratio = psi_ex * inv_psi;
-
-          if (config(site1) == config(site2)) {
-            energy += -ComplexConjugate(ratio) * (Ky_); // For Ky
-          } else {
-            energy += ComplexConjugate(ratio) * (Ky_); // For Ky
-          }
-        }
-        if (row < tn.rows() - 2) {
-          tn.BTenMoveStep(DOWN);
-        }
+      if (row < tn.rows() - 2) {
+        tn.BTenMoveStep(DOWN);
       }
     }
 
     if (col < tn.cols() - 1) {
       tn.BMPSMoveStep(RIGHT, trunc_para);
     }
-  }
-  if (has_unreasonable_bond_energy) {
-    std::cout << "wave function amplitude estimation :" << std::endl;
-    for (const auto &element: psi_gather) {
-      std::cout << element << " ";
-    }
-    std::cout << std::endl;
   }
   return energy;
 }
