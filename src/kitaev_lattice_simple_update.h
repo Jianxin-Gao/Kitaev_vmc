@@ -6,6 +6,7 @@
 #define KITAEV_KITAEV_LATTICE_SIMPLE_UPDATE_H
 
 #include "qlpeps/algorithm/simple_update/simple_update.h"
+#include <complex>
 
 namespace qlpeps {
 
@@ -54,13 +55,18 @@ namespace qlpeps {
         for (size_t col = 0; col < this->lx_ - 1; col ++){
             if ((col & 1) == 0) {
                 for (size_t row = 0; row < this->ly_ - 1; row = row + 2) {
-                    norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_x_, {row, col}, HORIZONTAL, para);
+                    ProjectionRes<std::complex<double>> result = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_x_, {row, col}, HORIZONTAL, para);
+                    norm = result.norm;
+
+                    //norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_x_, {row, col}, HORIZONTAL, para);
                     e0 += -std::log(norm) / this->update_para.tau;
                 }
             }
             else {
                 for (size_t row = 1; row < this->ly_; row = row + 2) {
-                    norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_x_, {row, col}, HORIZONTAL, para);
+                    ProjectionRes<std::complex<double>> result = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_x_, {row, col}, HORIZONTAL, para);
+                    norm = result.norm;
+                    //norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_x_, {row, col}, HORIZONTAL, para);
                     e0 += -std::log(norm) / this->update_para.tau;
                 }
             }
@@ -73,13 +79,17 @@ namespace qlpeps {
         for (size_t col = 0; col < this->lx_; col ++){
             if ((col & 1) == 0) {
                 for (size_t row = 1; row < this->ly_ - 1; row = row + 2) {
-                    norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_y_, {row, col}, VERTICAL, para);
+                    ProjectionRes<std::complex<double>> result = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_y_, {row, col}, VERTICAL, para);
+                    norm = result.norm;
+                    //norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_y_, {row, col}, VERTICAL, para);
                     e0 += -std::log(norm) / this->update_para.tau;
                 }
             }
             else {
                 for (size_t row = 0; row < this->ly_ - 1; row = row + 2) {
-                    norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_y_, {row, col}, VERTICAL, para);
+                    ProjectionRes<std::complex<double>> result = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_y_, {row, col}, VERTICAL, para);
+                    norm = result.norm;
+                    //norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_y_, {row, col}, VERTICAL, para);
                     e0 += -std::log(norm) / this->update_para.tau;
                 }
             }
@@ -91,13 +101,17 @@ namespace qlpeps {
         for (size_t col = 0; col < this->lx_; col ++){
             if ((col & 1) == 0) {
                 for (size_t row = 0; row < this->ly_ - 1; row = row + 2) {
-                    norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_z_, {row, col}, VERTICAL, para);
+                    ProjectionRes<std::complex<double>> result = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_z_, {row, col}, VERTICAL, para);
+                    norm = result.norm;
+                    //norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_z_, {row, col}, VERTICAL, para);
                     e0 += -std::log(norm) / this->update_para.tau;
                 }
             }
             else {
                 for (size_t row = 1; row < this->ly_ - 1; row = row + 2) {
-                    norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_z_, {row, col}, VERTICAL, para);
+                    ProjectionRes<std::complex<double>> result = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_z_, {row, col}, VERTICAL, para);
+                    norm = result.norm;
+                    //norm = this->peps_.NearestNeighborSiteProject(evolve_gate_nn_z_, {row, col}, VERTICAL, para);
                     e0 += -std::log(norm) / this->update_para.tau;
                 }
             }
