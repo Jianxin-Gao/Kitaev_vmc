@@ -16,6 +16,7 @@ namespace qlpeps {
     class KitaevLatticeSimpleUpdateExecutor : public SimpleUpdateExecutor<TenElemT, QNT> {
         using Tensor = QLTensor<TenElemT, QNT>;
         using PEPST = SquareLatticePEPS<TenElemT, QNT>;
+        using ComplexProjectionRes = ProjectionRes<std::complex<double>>;
     public:
         KitaevLatticeSimpleUpdateExecutor(const SimpleUpdatePara &update_para,
                                             const PEPST &peps_initial,
