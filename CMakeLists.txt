@@ -163,6 +163,11 @@ add_executable(kitaev111_vmc_update
 add_executable(test
         src/main.cpp)
 
+<<<<<<< HEAD
 add_executable(kitaev111_mc_measure
         src/kitaev_111_mc_measure.cpp
         src/myutil.cpp)
+=======
+add_executable(mpogen src_dmrg/mpogen.cpp src_dmrg/operator.cpp)
+add_executable(dmrg src_dmrg/dmrg.cpp src_dmrg/operator.cpp src_dmrg/myutil.cpp)
+>>>>>>> e78170175b67472767884bf62e1ae41a761eb5fa
