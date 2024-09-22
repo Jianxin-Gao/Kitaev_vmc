@@ -162,3 +162,7 @@ add_executable(kitaev111_vmc_update
 
 add_executable(test
         src/main.cpp)
+
+add_executable(kitaev111_mc_measure
+        src/kitaev_111_mc_measure.cpp
+        src/myutil.cpp)
