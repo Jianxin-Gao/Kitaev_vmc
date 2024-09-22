@@ -1,5 +1,5 @@
 //
-// Created by Jian-Xin Gao on 2024/4/13.
+// Created by Jian-Xin Gao on 2024/9/20.
 //
 
 #ifndef KITAEV_SPIN_ONEHALF_KITAEV111_H
@@ -7,6 +7,8 @@
 
 #include "qlpeps/algorithm/vmc_update/model_energy_solver.h"      //ModelEnergySolver
 #include "qlpeps/algorithm/vmc_update/model_measurement_solver.h" // ModelMeasurementSolver
+#include "qlpeps/utility/helpers.h"
+#include "qlcomplex.h"
 
 namespace qlpeps {
 using namespace qlten;
@@ -15,7 +17,7 @@ template<typename TenElemT, typename QNT>
 class SpinOneHalfKitaev111 : public ModelEnergySolver<TenElemT, QNT>, ModelMeasurementSolver<TenElemT, QNT> {
   using SITPS = SplitIndexTPS<TenElemT, QNT>;
  public:
-  SpinOneHalfKitaev111(void) = delete;
+  SpinOneHalfKitaev111(void) = default;
   SpinOneHalfKitaev111(double Jx, double Jy, double Jz, double H) : Kx_(Jx), Ky_(Jy), Kz_(Jz), H_(H) {}
 
   using ModelEnergySolver<TenElemT, QNT>::ModelEnergySolver;
@@ -144,7 +146,7 @@ ObservablesLocal<TenElemT> SpinOneHalfKitaev111<TenElemT, QNT>::SampleMeasure(
     WaveFunctionComponentType *tps_sample
 ) {
   ObservablesLocal<TenElemT> res;
-  TenElemT energy(0);
+  TenElemT energy(std::complex<double> (0.0, 0.0));
   TensorNetwork2D<TenElemT, QNT> &tn = tps_sample->tn;
   const size_t lx = tn.cols(), ly = tn.rows();
   res.bond_energys_loc.reserve(lx * ly * 2);
@@ -152,47 +154,66 @@ ObservablesLocal<TenElemT> SpinOneHalfKitaev111<TenElemT, QNT>::SampleMeasure(
   const Configuration &config = tps_sample->config;
   const BMPSTruncatePara &trunc_para = SquareTPSSampleNNExchange<TenElemT, QNT>::trun_para;
   TenElemT inv_psi = 1.0 / (tps_sample->amplitude);
+  std::vector<TenElemT> psi_gather;
+  psi_gather.reserve(tn.rows() + tn.cols() - 2);
   tn.GenerateBMPSApproach(UP, trunc_para);
+  res.one_point_functions_loc.reserve(tn.rows() * tn.cols() * 3); // 0:2:2*lx*ly-1 for <sigma_x>; 1:2:2*lx*ly-1 for <sigma_y>; 2*lx*ly:end for <sigma_z>
   for (size_t row = 0; row < ly; row++) {
     tn.InitBTen(LEFT, row);
     tn.GrowFullBTen(RIGHT, row, 1, true);
     // update the amplitude so that the error of ratio of amplitude can reduce by cancellation.
     tps_sample->amplitude = tn.Trace({row, 0}, HORIZONTAL);
     inv_psi = 1.0 / tps_sample->amplitude;
+    psi_gather.push_back(tps_sample->amplitude);
+
+      //Calculate horizontal bond energy contribution
     for (size_t col = 0; col < lx; col++) {
-      const SiteIdx site1 = {row, col};
-      if (col < tn.cols() - 1) {
-        //Calculate horizontal bond energy contribution
-        const SiteIdx site2 = {row, col + 1};
-        double horizontal_bond_energy;
-        if (config(site1) == config(site2)) {
-          horizontal_bond_energy = 0.25;
-        } else {
-          TenElemT psi_ex = tn.ReplaceNNSiteTrace(site1, site2, HORIZONTAL,
-                                                  (*split_index_tps)(site1)[config(site2)],
-                                                  (*split_index_tps)(site2)[config(site1)]);
-          TenElemT ratio = psi_ex * inv_psi;
+        std::complex<double> horizontal_bond_energy(0.0, 0.0);
+        std::complex<double> Zeeman_energy(0.0, 0.0);
+        const SiteIdx site1 = {row, col};
+        size_t config1 = config(site1);  //  0 : up ; 1 : down
+        Zeeman_energy += (config1 ? -H_ : H_); // H * sigma_z term
+        TenElemT psi_flip = tn.ReplaceOneSiteTrace(site1, (*split_index_tps)(site1)[1 - config1], HORIZONTAL);
+        TenElemT ratio = psi_flip * inv_psi;
+        Zeeman_energy += ComplexConjugate(ratio) * H_ * (config1 ? std::complex<double>(1, -1) : std::complex<double>(1, 1));
+        res.one_point_functions_loc.push_back(ComplexConjugate(ratio)); // for <sigma_x>;
+        res.one_point_functions_loc.push_back(ComplexConjugate(ratio) * (config1 ? std::complex<double>(0, -1) : std::complex<double>(0, 1))); //for <sigma_y>
 
-          horizontal_bond_energy = (-0.25 + ratio * 0.5);
+        energy += Zeeman_energy;
 
+          if (((row + col) & 1) == 0 && col + 1 < tn.cols()) {
+              //Calculate horizontal bond energy contribution
+              const SiteIdx site2 = {row, col + 1};
+
+              TenElemT psi_ex = tn.ReplaceNNSiteTrace(site1, site2, HORIZONTAL,
+                                                      (*split_index_tps)(site1)[1 - config1],
+                                                      (*split_index_tps)(site2)[1 - config(site2)]);
+              ratio = psi_ex * inv_psi;
+              horizontal_bond_energy += ComplexConjugate(ratio) * Kx_;
+              energy += ComplexConjugate(ratio) * Kx_; // For Kx
+              res.bond_energys_loc.push_back(horizontal_bond_energy);
+          } else if (((row + col) & 1) != 0 && col + 1 < tn.cols()) {
+              res.bond_energys_loc.push_back(horizontal_bond_energy);
+          }
+
+        if (col + 1 < tn.cols()) {
+            tn.BTenMoveStep(RIGHT);
         }
-        energy += horizontal_bond_energy;
-        res.bond_energys_loc.push_back(horizontal_bond_energy);
-        tn.BTenMoveStep(RIGHT);
-      }
     }
+
+
     if (row == tn.rows() / 2) { //measure correlation in the middle bonds
       SiteIdx site1 = {row, lx / 4};
 
       // sz(i) * sz(j)
-      double sz1 = config(site1) - 0.5;
+      double sz1 = 1 - 2*(double) config(site1);
       for (size_t i = 1; i <= lx / 2; i++) {
         SiteIdx site2 = {row, lx / 4 + i};
-        double sz2 = config(site2) - 0.5;
+        double sz2 = 1 - 2*(double) config(site2);
         res.two_point_functions_loc.push_back(sz1 * sz2);
       }
 
-      std::vector<TenElemT> diag_corr(lx / 2);// sp(i) * sm(j) or sm(i) * sp(j), the valid channel
+/*      std::vector<TenElemT> diag_corr(lx / 2);// sp(i) * sm(j) or sm(i) * sp(j), the valid channel
       tn(site1) = (*split_index_tps)(site1)[1 - config(site1)]; //temporally change
       tn.TruncateBTen(LEFT, lx / 4 + 1); // may be above two lines should be summarized as an API
       tn.GrowBTenStep(LEFT);//left boundary tensor just across Lx/4
@@ -220,7 +241,7 @@ ObservablesLocal<TenElemT> SpinOneHalfKitaev111<TenElemT, QNT>::SampleMeasure(
         for (size_t i = 1; i <= lx / 2; i++) {  //sm(i) * sp(j) = 0
           res.two_point_functions_loc.push_back(0.0);
         }
-      }
+      }*/
     }
     if (row < tn.rows() - 1) {
       tn.BMPSMoveStep(DOWN, trunc_para);
@@ -234,22 +255,34 @@ ObservablesLocal<TenElemT> SpinOneHalfKitaev111<TenElemT, QNT>::SampleMeasure(
     tn.GrowFullBTen(DOWN, col, 2, true);
     tps_sample->amplitude = tn.Trace({0, col}, VERTICAL);
     inv_psi = 1.0 / tps_sample->amplitude;
+    psi_gather.push_back(tps_sample->amplitude);
+
     for (size_t row = 0; row < tn.rows() - 1; row++) {
       const SiteIdx site1 = {row, col};
       const SiteIdx site2 = {row + 1, col};
-      double vertical_bond_energy;
-      if (config(site1) == config(site2)) {
-        vertical_bond_energy = 0.25;
-      } else {
-        TenElemT psi_ex = tn.ReplaceNNSiteTrace(site1, site2, VERTICAL,
-                                                (*split_index_tps)(site1)[config(site2)],
-                                                (*split_index_tps)(site2)[config(site1)]);
-        TenElemT ratio = psi_ex * inv_psi;
+      std::complex<double> vertical_bond_energy(0.0, 0.0);
+        if ((row + col) % 2 == 0) {
+            if (config(site1) == config(site2)) {
+                vertical_bond_energy += (Kz_);
+                energy += (Kz_); // For Kz
+            } else {
+                vertical_bond_energy += -(Kz_);
+                energy += -(Kz_); // For Kz
+            }
 
-        vertical_bond_energy = (-0.25 + ratio * 0.5);
-
-      }
-      energy += vertical_bond_energy;
+        } else {
+            TenElemT psi_ex = tn.ReplaceNNSiteTrace(site1, site2, VERTICAL,
+                                                    (*split_index_tps)(site1)[1 - config(site1)],
+                                                    (*split_index_tps)(site2)[1 - config(site2)]);
+            TenElemT ratio = psi_ex * inv_psi;
+            if (config(site1) == config(site2)) {
+                vertical_bond_energy += -ComplexConjugate(ratio) * (Ky_);
+                energy += -ComplexConjugate(ratio) * (Ky_); // For Ky
+            } else {
+                vertical_bond_energy += ComplexConjugate(ratio) * (Ky_);
+                energy += ComplexConjugate(ratio) * (Ky_); // For Ky
+            }
+        }
       res.bond_energys_loc.push_back(vertical_bond_energy);
       if (row < tn.rows() - 2) {
         tn.BTenMoveStep(DOWN);
@@ -260,9 +293,9 @@ ObservablesLocal<TenElemT> SpinOneHalfKitaev111<TenElemT, QNT>::SampleMeasure(
     }
   }
   res.energy_loc = energy;
-  res.one_point_functions_loc.reserve(tn.rows() * tn.cols());
+
   for (auto &spin_config: config) {
-    res.one_point_functions_loc.push_back((double) spin_config - 0.5);
+    res.one_point_functions_loc.push_back(1 - 2 * (double) spin_config); // For <sigma_z>
   }
   return res;
 }
