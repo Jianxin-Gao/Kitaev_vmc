@@ -54,7 +54,7 @@ class SquareTPSSample3SiteZ2Flip : public WaveFunctionComponent<TenElemT, QNT> {
       tn.InitBTen(LEFT, row);
       tn.GrowFullBTen(RIGHT, row, 3, true);
       for (size_t col = 0; col < tn.cols() - 2; col++) {
-        flip_accept_num += Z23SiteUpdate_({row, col}, {row, col + 1}, {row, col + 2}, HORIZONTAL, sitps, u_double);
+        flip_accept_num += Z23SiteUpdate_({row, col}, {row, col + 1}, {row, col + 2}, HORIZONTAL, sitps);
         if (col < tn.cols() - 3) {
           tn.BTenMoveStep(RIGHT);
         }
@@ -72,7 +72,7 @@ class SquareTPSSample3SiteZ2Flip : public WaveFunctionComponent<TenElemT, QNT> {
       tn.InitBTen(UP, col);
       tn.GrowFullBTen(DOWN, col, 3, true);
       for (size_t row = 0; row < tn.rows() - 2; row++) {
-        flip_accept_num += Z23SiteUpdate_({row, col}, {row + 1, col}, {row + 2, col}, VERTICAL, sitps, u_double);
+        flip_accept_num += Z23SiteUpdate_({row, col}, {row + 1, col}, {row + 2, col}, VERTICAL, sitps);
         if (row < tn.rows() - 3) {
           tn.BTenMoveStep(DOWN);
         }
@@ -91,42 +91,43 @@ class SquareTPSSample3SiteZ2Flip : public WaveFunctionComponent<TenElemT, QNT> {
   ///< NB! physical dim == 2
   bool Z23SiteUpdate_(const SiteIdx &site1, const SiteIdx &site2, const SiteIdx &site3,
                       BondOrientation bond_dir,
-                      const SplitIndexTPS<TenElemT, QNT> &sitps,
-                      std::uniform_real_distribution<double> &u_double) {
+                      const SplitIndexTPS<TenElemT, QNT> &sitps) {
+    std::vector<std::vector<size_t>> local_config_set(4);
+    std::vector<size_t> original_config = {this->config(site1), this->config(site2), this->config(site3)};
+    local_config_set[0] = original_config;
+    local_config_set[1] = {1 - this->config(site1), 1 - this->config(site2), this->config(site3)};
+    local_config_set[2] = {1 - this->config(site1), this->config(site2), 1 - this->config(site3)};
+    local_config_set[3] = {this->config(site1), 1 - this->config(site2), 1 - this->config(site3)};
+    std::sort(local_config_set.begin(), local_config_set.end());
+    std::vector<TenElemT> psi_set(4);
+    double psi_abs_max = 0.0;
+    size_t init_state;
+    for (size_t i = 0; i < 4; i++) {
+      if (local_config_set[i] == original_config) {
+        psi_set[i] = this->amplitude;
+        init_state = i;
+      } else {
+        psi_set[i] = tn.ReplaceTNNSiteTrace(site1, bond_dir,
+                                            sitps(site1)[local_config_set[i][0]],
+                                            sitps(site2)[local_config_set[i][1]],
+                                            sitps(site3)[local_config_set[i][2]]);
+      }
+      psi_abs_max = std::max(psi_abs_max, psi_set[i]);
+    }
+    std::vector<double> weights(4);
+    for (size_t i = 0; i < 4; i++) {
+      weights[i] = std::norm(psi_set[i] / psi_abs_max);
+    }
 
-    TenElemT psi0 = this->amplitude;
-    TenElemT psi1 = tn.ReplaceTNNSiteTrace(site1, bond_dir,
-                                           sitps(site1)[1 - this->config(site1)],
-                                           sitps(site2)[1 - this->config(site2)],
-                                           sitps(site3)[this->config(site3)]);
-    TenElemT psi2 = tn.ReplaceTNNSiteTrace(site1, bond_dir,
-                                           sitps(site1)[1 - this->config(site1)],
-                                           sitps(site2)[this->config(site2)],
-                                           sitps(site3)[1 - this->config(site3)]);
-    TenElemT psi3 = tn.ReplaceTNNSiteTrace(site1, bond_dir,
-                                           sitps(site1)[this->config(site1)],
-                                           sitps(site2)[1 - this->config(site2)],
-                                           sitps(site3)[1 - this->config(site3)]);
-    double psi_abs_max = std::max({std::abs(psi0), std::abs(psi1), std::abs(psi2), std::abs(psi3)});
-    std::vector<double>
-        weights = {std::norm(psi0 / psi_abs_max), std::norm(psi1 / psi_abs_max), std::norm(psi2 / psi_abs_max),
-                   std::norm(psi3 / psi_abs_max)};
-
-    size_t final_state = NonDBMCMCStateUpdate(0, weights, u_double(random_engine));
-    if (final_state == 0) {
+    size_t final_state = NonDBMCMCStateUpdate(init_state, weights, random_engine);
+    if (final_state == init_state) {
       return false;
-    } else if (final_state == 1) {
-      this->config(site1) = 1 - this->config(site1);
-      this->config(site2) = 1 - this->config(site2);
-      this->amplitude = psi1;
-    } else if (final_state == 2) {
-      this->config(site1) = 1 - this->config(site1);
-      this->config(site3) = 1 - this->config(site3);
-      this->amplitude = psi2;
-    } else if (final_state == 3) {
-      this->config(site2) = 1 - this->config(site2);
-      this->config(site3) = 1 - this->config(site3);
-      this->amplitude = psi3;
+    } else {
+      const std::vector<size_t> &new_local_config = local_config_set[final_state];
+      this->config(site1) = new_local_config.at(0);
+      this->config(site2) = new_local_config.at(1);
+      this->config(site3) = new_local_config.at(2);
+      this->amplitude = psi_set[final_state];
     }
     tn.UpdateSiteConfig(site1, this->config(site1), sitps);
     tn.UpdateSiteConfig(site2, this->config(site2), sitps);

@@ -160,9 +160,6 @@ add_executable(kitaev111_vmc_update
         src/kitaev111_vmc_update.cpp
         src/myutil.cpp)
 
-add_executable(test
-        src/main.cpp)
-
 
 add_executable(kitaev111_mc_measure
         src/kitaev_111_mc_measure.cpp
@@ -170,4 +167,6 @@ add_executable(kitaev111_mc_measure
 
 add_executable(mpogen src_dmrg/mpogen.cpp src_dmrg/operator.cpp)
 add_executable(dmrg src_dmrg/dmrg.cpp src_dmrg/operator.cpp src_dmrg/myutil.cpp)
+add_executable(measure1 src_dmrg/measure1.cpp src_dmrg/operator.cpp src_dmrg/myutil.cpp)
+add_executable(measure2 src_dmrg/measure2.cpp src_dmrg/operator.cpp src_dmrg/myutil.cpp)
 

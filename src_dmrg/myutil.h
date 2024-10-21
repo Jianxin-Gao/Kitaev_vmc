@@ -7,6 +7,8 @@
 size_t GetNumofMps();
 void Show(std::vector<size_t> v);
 bool ParserBondDimension(int argc, char *argv[],
-                         std::vector<size_t>& D_set);
-
+                         std::vector<size_t> &D_set);
+bool ParserMeasureSite(const int argc, char *argv[],
+                       size_t &start,
+                       size_t &end);
 #endif
