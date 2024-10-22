@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
   CaseParams params(argv[1]);
 
   size_t Lx = params.Lx, Ly = params.Ly;
-  size_t N = 2 * Lx * Ly;
+  size_t N = Lx * Ly;
   if (GetNumofMps() != N) {
     std::cout << "The number of mps files are inconsistent with mps size!" << std::endl;
     exit(1);
@@ -94,8 +94,8 @@ int main(int argc, char *argv[]) {
     std::cout << "measured sz sz correlation." << std::endl;
   }
   world.barrier();
-  MeasureTwoSiteOp(mps, kMpsPath, sigma_x, sigma_x, measure_tasks, "pmsf", world);
-  MeasureTwoSiteOp(mps, kMpsPath, sigma_y, sigma_z, measure_tasks, "mpsf", world);
+  MeasureTwoSiteOp(mps, kMpsPath, sigma_x, sigma_x, measure_tasks, "xxsf", world);
+  MeasureTwoSiteOp(mps, kMpsPath, sigma_y, sigma_y, measure_tasks, "yysf", world);
   two_site_measure_timer.PrintElapsed();
 
   endTime = clock();

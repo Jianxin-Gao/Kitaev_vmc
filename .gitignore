@@ -48,3 +48,8 @@ external/gqten/
 .DS_Store
 .ycm_extra_conf.py
 
+
+# Mac
+.DS_Store
+
+data/*
