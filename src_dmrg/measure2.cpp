@@ -88,14 +88,15 @@ int main(int argc, char *argv[]) {
   }
 
   Timer two_site_measure_timer("measure spin_ structure factors");
-  MeasureTwoSiteOp(mps, kMpsPath, sigma_z, sigma_z,
+  mps.Load();
+  MeasureTwoSiteOp(mps, sigma_z, sigma_z,
                    measure_tasks, "zzsf", world);
   if (world.rank() == 0) {
     std::cout << "measured sz sz correlation." << std::endl;
   }
   world.barrier();
-  MeasureTwoSiteOp(mps, kMpsPath, sigma_x, sigma_x, measure_tasks, "xxsf", world);
-  MeasureTwoSiteOp(mps, kMpsPath, sigma_y, sigma_y, measure_tasks, "yysf", world);
+  MeasureTwoSiteOp(mps, sigma_x, sigma_x, measure_tasks, "xxsf", world);
+  MeasureTwoSiteOp(mps, sigma_y, sigma_y, measure_tasks, "yysf", world);
   two_site_measure_timer.PrintElapsed();
 
   endTime = clock();
