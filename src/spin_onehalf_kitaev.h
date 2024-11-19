@@ -7,6 +7,8 @@
 
 #include "qlpeps/algorithm/vmc_update/model_energy_solver.h"      //ModelEnergySolver
 #include "qlpeps/algorithm/vmc_update/model_measurement_solver.h" // ModelMeasurementSolver
+#include "qlpeps/algorithm/vmc_update/wave_function_component.h"  //WaveFunctionComponent
+
 
 namespace qlpeps {
 using namespace qlten;
@@ -47,7 +49,7 @@ TenElemT SpinOneHalfKitaev<TenElemT, QNT>::CalEnergyAndHoles(const SITPS *split_
   bool has_unreasonable_bond_energy(false);
   TensorNetwork2D<TenElemT, QNT> &tn = tps_sample->tn;
   const Configuration &config = tps_sample->config;
-  const BMPSTruncatePara &trunc_para = SquareTPSSampleNNExchange<TenElemT, QNT>::trun_para;
+  const BMPSTruncatePara &trunc_para = WaveFunctionComponent<TenElemT, QNT>::trun_para.value();
   TenElemT inv_psi = 1.0 / (tps_sample->amplitude);
   std::vector<TenElemT> psi_gather;
   psi_gather.reserve(tn.rows() + tn.cols() - 2);
@@ -182,7 +184,7 @@ ObservablesLocal<TenElemT> SpinOneHalfKitaev<TenElemT, QNT>::SampleMeasure(
   res.bond_energys_loc.reserve(lx * ly * 2);
   res.two_point_functions_loc.reserve(lx / 2 * 3);
   const Configuration &config = tps_sample->config;
-  const BMPSTruncatePara &trunc_para = SquareTPSSampleNNExchange<TenElemT, QNT>::trun_para;
+  const BMPSTruncatePara &trunc_para = WaveFunctionComponent<TenElemT, QNT>::trun_para.value();
   TenElemT inv_psi = 1.0 / (tps_sample->amplitude);
   tn.GenerateBMPSApproach(UP, trunc_para);
   for (size_t row = 0; row < ly; row++) {

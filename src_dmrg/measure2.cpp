@@ -4,7 +4,7 @@
     for measure spin, charge, on-site pair, single-particle correlation function.
     memory optimized and parallel version.
     usage:
-        mpirun -n 2*Ly ./measure2
+        mpirun -n Ly ./measure2
     Optional arguments:
       --start=
       --end=
@@ -38,12 +38,12 @@ int main(int argc, char *argv[]) {
   mpi::environment env;
   mpi::communicator world;
   if (argc == 1) {
-    std::cout << "Usage: \n mpirun -np 2*Ly ./measure2 <params file> --start=<start x coor> --end=<end x coor>\n";
+    std::cout << "Usage: \n mpirun -np Ly ./measure2 <params file> --start=<start x coor> --end=<end x coor>\n";
     return 0;
   } else if (argc == 2) {
     std::cout << "No start and end parameters. set start as Lx/4 and end as 3*Lx/4" << std::endl;
     std::cout
-        << "The complete usage is: \n mpirun -np 2*Ly ./measure2 <params file> --start=<start x coor> --end=<end x coor>\n";
+        << "The complete usage is: \n mpirun -np Ly ./measure2 <params file> --start=<start x coor> --end=<end x coor>\n";
   }
 
   clock_t startTime, endTime;
