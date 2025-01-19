@@ -23,8 +23,13 @@ using namespace qlpeps;
 using TPSSampleT = SquareTPSSampleFullSpaceNNFlip<TenElemT, U1QN>;
 
 int main(int argc, char **argv) {
-    boost::mpi::environment env;
-    boost::mpi::communicator world;
+    //boost::mpi::environment env;
+    //boost::mpi::communicator world;
+    MPI_Init(&argc, &argv);
+    int rank, mpi_size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &mpi_size);
+
     VMCUpdateParams params(argv[1]);
 
     qlten::hp_numeric::SetTensorManipulationThreads(params.ThreadNum);
@@ -51,7 +56,7 @@ int main(int argc, char **argv) {
             measurement_para.wavefunction_path + "/tps_ten0_0_0.qlten")) {// test if split index tps tensors exsit
         executor = new MonteCarloMeasurementExecutor<TenElemT, U1QN, TPSSampleT, Model>(measurement_para,
                                                                                         params.Ly, params.Lx,
-                                                                                        world,
+                                                                                        MPI_COMM_WORLD,
                                                                                         kitaev111_solver);
     } else {
         TPS<QLTEN_Complex, U1QN> tps = TPS<QLTEN_Complex, U1QN>(params.Ly, params.Lx);
@@ -61,13 +66,13 @@ int main(int argc, char **argv) {
         };
         executor = new MonteCarloMeasurementExecutor<TenElemT, U1QN, TPSSampleT, Model>(measurement_para,
                                                                                         tps,
-                                                                                        world, kitaev111_solver);
+                                                                                        MPI_COMM_WORLD, kitaev111_solver);
     }
 
     executor->Execute();
     delete executor;
     //std::string bondinfo_filename = "energy_bonds" + std::to_string(params.Ly) + "-" + std::to_string(params.Lx);
 
-
+    MPI_Finalize();
     return 0;
 }

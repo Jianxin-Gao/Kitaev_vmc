@@ -15,8 +15,12 @@ using namespace qlpeps;
 using TPSSampleT = SquareTPSSampleFullSpaceNNFlip<TenElemT, U1QN>;
 
 int main(int argc, char **argv) {
-  boost::mpi::environment env;
-  boost::mpi::communicator world;
+  //boost::mpi::environment env;
+  //boost::mpi::communicator world;
+  MPI_Init(&argc, &argv);
+    int rank, mpi_size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &mpi_size);
   VMCUpdateParams params(argv[1]);
 
   qlten::hp_numeric::SetTensorManipulationThreads(params.ThreadNum);
@@ -50,7 +54,7 @@ int main(int argc, char **argv) {
   if (IsFileExist(optimize_para.wavefunction_path + "/tps_ten0_0_0.qlten")) {// test if split index tps tensors exist
     executor = new VMCPEPSExecutor<TenElemT, U1QN, TPSSampleT, Model>(optimize_para,
                                                                       params.Ly, params.Lx,
-                                                                      world, kitaev111_solver);
+                                                                      MPI_COMM_WORLD, kitaev111_solver);
   } else {
     TPS<TenElemT, U1QN> tps = TPS<TenElemT, U1QN>(params.Ly, params.Lx);
     if (!tps.Load()) {
@@ -58,10 +62,10 @@ int main(int argc, char **argv) {
       exit(-2);
     };
     executor = new VMCPEPSExecutor<TenElemT, U1QN, TPSSampleT, Model>(optimize_para, tps,
-                                                                      world, kitaev111_solver);
+                                                                      MPI_COMM_WORLD, kitaev111_solver);
   }
   executor->Execute();
   delete executor;
-
+    MPI_Finalize();
   return 0;
 }
